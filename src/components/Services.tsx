@@ -86,7 +86,7 @@ export default function Services() {
         </div>
 
         {/* Split layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
           {/* Left — numbered service selector */}
           <div ref={listRef} className="lg:col-span-5 flex flex-col gap-0" style={{ border: '1px solid var(--color-rule)', borderRadius: 'var(--radius-xl)', overflow: 'hidden' }}>
@@ -150,7 +150,7 @@ export default function Services() {
           </div>
 
           {/* Right — spec panel */}
-          <div ref={panelRef} className="lg:col-span-7 flex">
+          <div ref={panelRef} className="lg:col-span-7">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedService.id}
@@ -213,7 +213,7 @@ export default function Services() {
                 </div>
 
                 {/* Description + benefits */}
-                <div style={{ padding: '2rem 2.5rem', flex: 1 }}>
+                <div style={{ padding: '2rem 2.5rem' }}>
                   <p style={{
                     fontFamily: 'var(--font-body)',
                     fontSize: 'var(--text-sm)',
