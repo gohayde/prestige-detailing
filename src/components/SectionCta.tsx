@@ -126,6 +126,7 @@ export default function SectionCta() {
               href={whatsAppLink}
               target="_blank"
               rel="noopener noreferrer"
+              className="btn-primary"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '0.625rem',
                 padding: '0.875rem 2rem',
@@ -139,16 +140,7 @@ export default function SectionCta() {
                 textTransform: 'uppercase',
                 textDecoration: 'none',
                 boxShadow: 'var(--shadow-glow)',
-                transition: 'background 350ms cubic-bezier(0.32,0.72,0,1), transform 350ms cubic-bezier(0.32,0.72,0,1)',
                 whiteSpace: 'nowrap',
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = 'oklch(90% 0.170 88)';
-                (e.currentTarget as HTMLAnchorElement).style.transform = 'scale(1.03)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = 'var(--color-accent)';
-                (e.currentTarget as HTMLAnchorElement).style.transform = 'scale(1)';
               }}
             >
               <WhatsAppIcon />
@@ -157,6 +149,7 @@ export default function SectionCta() {
 
             <a
               href="tel:0555096234"
+              className="btn-ghost"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
                 padding: '0.875rem 1.75rem',
@@ -170,16 +163,7 @@ export default function SectionCta() {
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
                 textDecoration: 'none',
-                transition: 'border-color 300ms ease, color 300ms ease',
                 whiteSpace: 'nowrap',
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--color-accent)';
-                (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-ink)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = 'oklch(96% 0.006 88 / 0.25)';
-                (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-ink-2)';
               }}
             >
               Call directly

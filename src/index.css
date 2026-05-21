@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: "Cormorant Garant", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 :root {
@@ -18,8 +18,9 @@
   --radius-lg: 0.75rem;
   --radius-sm: 0.25rem;
   --shadow-card: 0 25px 50px -12px oklch(0% 0 0 / 0.55);
-  --shadow-glow: 0 0 24px oklch(85% 0.170 88 / 0.30);
-  --font-display: "Space Grotesk", sans-serif;
+  --shadow-glow: 0 8px 20px oklch(85% 0.170 88 / 0.18);
+  --font-display: "Cormorant Garant", serif;
+  --font-ui: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-outlier: "Space Grotesk", sans-serif;
   --text-xs: 0.75rem;
@@ -110,4 +111,44 @@
 }
 .backdrop-blur-3xl {
   backdrop-filter: blur(64px);
+}
+
+/* ── GPU-friendly hover states — replaces all onMouseEnter/onMouseLeave mutations ── */
+
+/* Primary gold CTA (Hero, SectionCta) */
+.btn-primary {
+  transition: background 350ms cubic-bezier(0.32,0.72,0,1), transform 350ms cubic-bezier(0.32,0.72,0,1);
+  will-change: transform;
+}
+.btn-primary:hover {
+  background: oklch(90% 0.170 88) !important;
+  transform: scale(1.03);
+}
+
+/* Ghost/outline CTA (Hero, SectionCta, Header) */
+.btn-ghost {
+  transition: border-color 300ms cubic-bezier(0.32,0.72,0,1), color 300ms cubic-bezier(0.32,0.72,0,1);
+}
+.btn-ghost:hover {
+  border-color: var(--color-accent) !important;
+  color: var(--color-ink) !important;
+}
+
+/* Header nav inactive pill */
+.nav-pill {
+  transition: background var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+}
+.nav-pill:hover {
+  background: oklch(22% 0.012 45) !important;
+  color: var(--color-ink) !important;
+}
+
+/* Header "Book Now" pill */
+.btn-header-book {
+  transition: background var(--dur-micro) var(--ease-out), transform var(--dur-micro) var(--ease-out);
+  will-change: transform;
+}
+.btn-header-book:hover {
+  background: oklch(90% 0.170 88) !important;
+  transform: scale(1.03);
 }

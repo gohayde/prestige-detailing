@@ -102,7 +102,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
           style={{
             fontFamily: 'var(--font-body)',
             fontSize: 'clamp(var(--text-sm), 1.5vw + 0.4rem, var(--text-base))',
-            fontWeight: 350,
+            fontWeight: 400,
             lineHeight: 1.65,
             color: 'var(--color-ink-2)',
             maxWidth: '42ch',
@@ -125,7 +125,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
             href="https://wa.me/971555096234"
             target="_blank"
             rel="noopener noreferrer"
-            className="hero-cta-primary"
+            className="btn-primary"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.625rem',
               padding: '0.75rem 1.75rem',
@@ -138,18 +138,8 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               textDecoration: 'none',
-              transition: 'background 350ms cubic-bezier(0.32,0.72,0,1), transform 350ms cubic-bezier(0.32,0.72,0,1)',
               boxShadow: 'var(--shadow-glow)',
               whiteSpace: 'nowrap',
-              willChange: 'transform',
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.background = 'oklch(90% 0.170 88)';
-              (e.currentTarget as HTMLAnchorElement).style.transform = 'scale(1.03)';
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.background = 'var(--color-accent)';
-              (e.currentTarget as HTMLAnchorElement).style.transform = 'scale(1)';
             }}
           >
             Book Now
@@ -157,6 +147,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
 
           <button
             onClick={() => onLearnMoreClick('services')}
+            className="btn-ghost"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.625rem',
               padding: '0.75rem 0.75rem 0.75rem 1.5rem',
@@ -170,16 +161,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               cursor: 'pointer',
-              transition: 'border-color 350ms cubic-bezier(0.32,0.72,0,1), color 350ms cubic-bezier(0.32,0.72,0,1)',
               whiteSpace: 'nowrap',
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--color-accent)';
-              (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-ink)';
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--color-rule)';
-              (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-ink-2)';
             }}
           >
             Explore Services

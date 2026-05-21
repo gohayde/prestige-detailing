@@ -19,10 +19,10 @@ export default function StatsBar() {
       style={{
         position: 'relative',
         zIndex: 25,
-        background: '#000000', // Pure premium solid black base
+        background: 'var(--color-paper)',
         padding: '2.5rem 0',
-        // Heavy immersive black shadows above and below for a seamless transition
-        boxShadow: '0 -30px 60px rgba(0,0,0,1), 0 30px 60px rgba(0,0,0,1)',
+        borderTop: '1px solid var(--color-rule)',
+        borderBottom: '1px solid var(--color-rule)',
       }}
     >
       <div style={{ maxWidth: '72rem', margin: '0 auto', padding: '0 var(--space-lg)' }}>

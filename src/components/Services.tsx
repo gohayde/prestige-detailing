@@ -169,6 +169,9 @@ export default function Services() {
                   }}
                 >
                   <div className="flex items-center gap-4 pl-2">
+                    <div className="shrink-0 w-8 h-8" style={{ color: isSelected ? 'var(--color-accent)' : 'var(--color-muted)' }}>
+                      {getIcon(service.icon, 'w-8 h-8')}
+                    </div>
                     <div>
                       <h3 className="text-sm font-bold tracking-wide uppercase transition-colors" style={{ color: isSelected ? 'var(--color-accent)' : 'var(--color-ink-2)' }}>
                         {service.title}
@@ -195,7 +198,7 @@ export default function Services() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.4 }}
-                className="w-full rounded-3xl p-8 md:p-10 flex flex-col justify-between overflow-hidden relative"
+                className="w-full rounded-2xl p-8 md:p-10 flex flex-col justify-between overflow-hidden relative"
                     style={{ background: 'var(--color-paper-3)', border: '1px solid var(--color-rule)', boxShadow: 'var(--shadow-card)' }}
               >
                 {/* Visual Glass background thumbnail reflection */}

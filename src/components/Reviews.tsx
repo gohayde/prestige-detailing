@@ -50,7 +50,7 @@ function ReviewCard({ author, body }: { author: string; body: string; key?: any 
   return (
     <div
       style={{
-        width: '320px',
+        width: '380px',
         flexShrink: 0,
         borderRadius: 'var(--radius-xl)',
         border: '1px solid var(--color-rule)',
@@ -64,23 +64,18 @@ function ReviewCard({ author, body }: { author: string; body: string; key?: any 
         position: 'relative',
       }}
     >
-      {/* Dynamic double-bezel accent block */}
-      <span style={{
-        fontFamily: 'var(--font-mono)',
-        fontSize: '1.5rem',
-        color: 'var(--color-accent)',
-        opacity: 0.15,
-        lineHeight: 1,
-        position: 'absolute',
-        top: '1rem',
-        left: '1rem',
-      }}>“</span>
+      {/* 5-star rating */}
+      <div style={{ display: 'flex', gap: '0.2rem' }}>
+        {[0,1,2,3,4].map(i => (
+          <Star key={i} style={{ width: '0.875rem', height: '0.875rem', fill: 'var(--color-accent)', color: 'var(--color-accent)' }} />
+        ))}
+      </div>
 
       {/* Body */}
       <p style={{
         fontFamily: 'var(--font-body)',
         fontSize: '0.8125rem',
-        fontWeight: 350,
+        fontWeight: 400,
         lineHeight: 1.6,
         color: 'var(--color-ink-2)',
         margin: 0,

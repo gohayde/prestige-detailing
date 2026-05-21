@@ -1,0 +1,762 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - button "Prestige Detailing — home" [ref=e6] [cursor=pointer]:
+        - img "Prestige Detailing" [ref=e7]
+      - navigation "Main navigation" [ref=e8]:
+        - button "Studio" [ref=e9] [cursor=pointer]
+        - button "Services" [ref=e10] [cursor=pointer]
+        - button "Gallery" [ref=e11] [cursor=pointer]
+        - button "Reviews" [ref=e12] [cursor=pointer]
+        - button "Why Us" [ref=e13] [cursor=pointer]
+        - button "Estimate" [ref=e14] [cursor=pointer]
+        - button "FAQ" [ref=e15] [cursor=pointer]
+        - button "Location" [ref=e16] [cursor=pointer]
+      - generic [ref=e17]:
+        - link "Call" [ref=e18] [cursor=pointer]:
+          - /url: tel:0555096234
+          - img [ref=e19]
+          - text: Call
+        - link "Book Now" [ref=e21] [cursor=pointer]:
+          - /url: tel:0555096234
+  - generic [ref=e28]:
+    - generic [ref=e30]: Dubai's Premier Detailing Studio
+    - heading "Home of Premium Car Detailing" [level=1] [ref=e32]:
+      - text: Home of Premium
+      - text: Car Detailing
+    - paragraph [ref=e33]: Precision paint protection for Dubai's finest vehicles. PPF, 9H ceramic coating, and paint correction — personally supervised by Mr. Ayman from start to finish.
+    - generic [ref=e34]:
+      - link "Book Now" [ref=e35] [cursor=pointer]:
+        - /url: https://wa.me/971555096234
+      - button "Explore Services" [ref=e36] [cursor=pointer]:
+        - text: Explore Services
+        - img [ref=e38]
+  - generic [ref=e42]:
+    - generic [ref=e43]:
+      - generic [ref=e44]: 100+
+      - generic [ref=e45]: 5-Star Reviews
+    - generic [ref=e46]:
+      - generic [ref=e47]: 9H
+      - generic [ref=e48]: Coating Grade
+    - generic [ref=e49]:
+      - generic [ref=e50]: Owner
+      - generic [ref=e51]: Supervised
+    - generic [ref=e52]:
+      - generic [ref=e53]: DIP 2
+      - generic [ref=e54]: Dubai Studio
+  - generic [ref=e56]:
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - generic [ref=e59]: The artisans of Prestige
+        - heading "PRECISION WITHOUT LIMITS" [level=2] [ref=e60]:
+          - text: PRECISION
+          - text: WITHOUT LIMITS
+        - generic [ref=e61]:
+          - paragraph [ref=e62]: At Prestige Detailing, we break industry standards with a clinical paint protection laboratory powered by an elite team of world-class female detailing specialists and master artisans. Our specialists bring unparalleled focus and surgical micro-precision to every vehicle.
+          - paragraph [ref=e63]: Beginning their careers on day one with advanced clay-bar decontamination and high-intensity paint thickness testing, they master the delicate physical science of paint surface structures. Through technical development, they progress to multi-stage rotary compounding and the intricate art of hand-folding self-healing thermo-elastomer Paint Protection Film (PPF).
+          - paragraph [ref=e64]: Their hyper-focused vision and patient dedication ensure perfectly tucked clean edge alignments, seamless seams, and glass-like mirror finishes on Dubai's rarest hypercars.
+      - generic [ref=e65]:
+        - img "Prestige Maybach Detailing Studio" [ref=e67]
+        - img [ref=e72] [cursor=pointer]
+    - generic:
+      - generic: PRESTIGE
+  - generic [ref=e77]:
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e80]: Precision mechanical protection
+        - heading "STUDIO SERVICES & SPECIFICATION SHEETS" [level=2] [ref=e81]:
+          - text: STUDIO SERVICES
+          - text: "& SPECIFICATION SHEETS"
+      - paragraph [ref=e82]: We operate utilizing laboratory-grade products from the world's leading chemical manufacturers. Select a service to inspect its rigorous specifications and estimated costs.
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]: Select service
+        - button "Self-Healing PPF (Paint Protection Film) From AED 8,500" [ref=e86] [cursor=pointer]:
+          - generic [ref=e88]:
+            - heading "Self-Healing PPF (Paint Protection Film)" [level=3] [ref=e89]
+            - paragraph [ref=e90]: From AED 8,500
+          - img [ref=e92]
+        - button "Nano-Ceramic Coating Protection From AED 1,800" [ref=e94] [cursor=pointer]:
+          - generic [ref=e96]:
+            - heading "Nano-Ceramic Coating Protection" [level=3] [ref=e97]
+            - paragraph [ref=e98]: From AED 1,800
+          - img [ref=e100]
+        - button "Multi-Stage Paint Correction & Polish From AED 1,200" [ref=e102] [cursor=pointer]:
+          - generic [ref=e104]:
+            - heading "Multi-Stage Paint Correction & Polish" [level=3] [ref=e105]
+            - paragraph [ref=e106]: From AED 1,200
+          - img [ref=e108]
+        - button "Premium Heat-Rejection Window Tinting From AED 900" [ref=e110] [cursor=pointer]:
+          - generic [ref=e112]:
+            - heading "Premium Heat-Rejection Window Tinting" [level=3] [ref=e113]
+            - paragraph [ref=e114]: From AED 900
+          - img [ref=e116]
+        - button "Luxury Cabin Interior Deep Cleaning From AED 600" [ref=e118] [cursor=pointer]:
+          - generic [ref=e120]:
+            - heading "Luxury Cabin Interior Deep Cleaning" [level=3] [ref=e121]
+            - paragraph [ref=e122]: From AED 600
+          - img [ref=e124]
+        - button "Exceptional Flood & Water Damage Recovery From AED 2,500" [ref=e126] [cursor=pointer]:
+          - generic [ref=e128]:
+            - heading "Exceptional Flood & Water Damage Recovery" [level=3] [ref=e129]
+            - paragraph [ref=e130]: From AED 2,500
+          - img [ref=e132]
+        - button "Paintless Dent Repair (PDR) From AED 400" [ref=e134] [cursor=pointer]:
+          - generic [ref=e136]:
+            - heading "Paintless Dent Repair (PDR)" [level=3] [ref=e137]
+            - paragraph [ref=e138]: From AED 400
+          - img [ref=e140]
+      - generic [ref=e143]:
+        - img "Self-Healing PPF (Paint Protection Film)" [ref=e145]
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - text: Spec sheet
+              - heading "Self-Healing PPF (Paint Protection Film)" [level=3] [ref=e150]
+            - generic [ref=e151]: Self-Healing
+          - paragraph [ref=e152]: The ultimate physical armor for luxury supercars. Premium clear or matte polyurethane film with advanced thermal shape memory that absorbs impact and heals surface scratches under the Dubai sun.
+          - generic [ref=e153]:
+            - generic [ref=e154]: "Included:"
+            - generic [ref=e155]:
+              - img [ref=e156]
+              - generic [ref=e159]: Advanced thermal-healing technology (fine scuffs and wash swirls vanish under solar heat)
+            - generic [ref=e160]:
+              - img [ref=e161]
+              - generic [ref=e164]: High-durability shielding against sharp rock chips, sandstorms, and key scratches
+            - generic [ref=e165]:
+              - img [ref=e166]
+              - generic [ref=e169]: Optically perfect clear gloss or sleek custom satin matte visual styling options
+            - generic [ref=e170]:
+              - img [ref=e171]
+              - generic [ref=e174]: Full bodywork edge-rolling and clinical alignment wrap personally inspected
+        - generic [ref=e175]:
+          - generic [ref=e176]:
+            - text: Estimated base value
+            - generic [ref=e177]:
+              - generic [ref=e178]: AED 8,500
+              - generic [ref=e179]: / basic package
+          - link "Book via WhatsApp" [ref=e180] [cursor=pointer]:
+            - /url: https://wa.me/971555096234?text=Hi%20Ayman!%20I%20would%20love%20to%20book%20the%20%22Self-Healing%20PPF%20(Paint%20Protection%20Film)%22%20service%20package%20for%20my%20car%20(Estimated%20at%20AED%208%2C500).%20Can%20we%20chat%20about%20scheduling%3F
+            - img [ref=e181]
+            - generic [ref=e183]: Book via WhatsApp
+  - generic [ref=e186]:
+    - generic [ref=e187]:
+      - paragraph [ref=e188]: Verified scientific results
+      - heading "The transformation" [level=2] [ref=e189]
+      - generic [ref=e190]:
+        - generic [ref=e191]:
+          - generic [ref=e194]: "01"
+          - generic [ref=e195]:
+            - paragraph [ref=e196]: Preparation
+            - heading "Deep Clay Decontamination" [level=4] [ref=e197]
+            - paragraph [ref=e198]: Extracting embedded brake dust and industrial debris to establish surgical paint alignment.
+        - generic [ref=e199]:
+          - generic [ref=e202]: "02"
+          - generic [ref=e203]:
+            - paragraph [ref=e204]: Correction
+            - heading "Scientific Micro-Polishing" [level=4] [ref=e205]
+            - paragraph [ref=e206]: Multi-stage compounding removes deep swirls without hologram tracks.
+        - generic [ref=e207]:
+          - generic [ref=e210]: "03"
+          - generic [ref=e211]:
+            - paragraph [ref=e212]: Armour
+            - heading "Molecular Nano Lock" [level=4] [ref=e213]
+            - paragraph [ref=e214]: Sealing with 9H glass-film — locking mirror-slick reflection and deep colour contrast.
+    - generic [ref=e216]:
+      - img "After professional detailing — mirror finish"
+      - generic:
+        - img "Before — oxidised paint under Dubai sun"
+      - generic:
+        - generic:
+          - img
+      - generic [ref=e217]: Before
+      - generic [ref=e218]: After
+      - generic [ref=e219]:
+        - img [ref=e220]
+        - generic [ref=e223]: Drag to compare
+  - generic [ref=e224]:
+    - generic [ref=e226]:
+      - generic [ref=e227]:
+        - paragraph [ref=e228]: Client testimonials
+        - heading "What our clients say" [level=2] [ref=e229]
+        - generic [ref=e230]:
+          - generic [ref=e231]:
+            - img [ref=e232]
+            - img [ref=e234]
+            - img [ref=e236]
+            - img [ref=e238]
+            - img [ref=e240]
+          - generic [ref=e242]: 4.9 · 100+ verified reviews on Google
+      - link "All reviews on Google" [ref=e243] [cursor=pointer]:
+        - /url: https://g.co/kgs/prestigedetailingdubai
+        - text: All reviews on Google
+        - img [ref=e244]
+    - generic [ref=e249]:
+      - generic [ref=e250]:
+        - generic [ref=e251]: “
+        - paragraph [ref=e252]: It all started back in 2023 when I first visited Prestige Detailing and met Ayman. The work was absolutely extraordinary — every panel treated with the kind of care you only see from true craftsmen.
+        - paragraph [ref=e254]: — J Qazi
+      - generic [ref=e255]:
+        - generic [ref=e256]: “
+        - paragraph [ref=e257]: I had a great experience at Prestige Auto dealing with Mr. Ayman and his team. They were professional, attentive, and delivered excellent detailing results. I highly recommend them to anyone looking for high-quality car detailing services.
+        - paragraph [ref=e259]: — Ahmad Alshamsi
+      - generic [ref=e260]:
+        - generic [ref=e261]: “
+        - paragraph [ref=e262]: This is the place to go if you want to have one of the best car care services in Dubai. Not only is there work immaculate but the owner is a great person and will always give solid and honest advice.
+        - paragraph [ref=e264]: — Adel Al Shishani
+      - generic [ref=e265]:
+        - generic [ref=e266]: “
+        - paragraph [ref=e267]: After nearly a month in the garage for a full restoration, I was ready to replace my car's entire interior—until Prestige Detailing worked their magic! The results were unbelievable; the interior looks brand new. Highly recommended!
+        - paragraph [ref=e269]: — Zaid Hamidi
+      - generic [ref=e270]:
+        - generic [ref=e271]: “
+        - paragraph [ref=e272]: I had a great experience at prestige auto dealing with Mr Ayman. He and his team paid great attention to detail and were very meticulous with their work. The process was very smooth and transparent, and I was consistently updated.
+        - paragraph [ref=e274]: — Osama Kandil
+      - generic [ref=e275]:
+        - generic [ref=e276]: “
+        - paragraph [ref=e277]: Guys, if you wish to have your car taking care of, only prestige. If you throw tailor, Artist, scientist, and chemist in a mixer you get Ayman. Prestige is a 5 star hotel for your car staycation.
+        - paragraph [ref=e279]: — Mohannad elumatec
+      - generic [ref=e280]:
+        - generic [ref=e281]: “
+        - paragraph [ref=e282]: I recently got ceramic coating done at Prestige Detailing, and I must say—they did an amazing job! The coating quality is very, very good, and the shine and protection on my car are clearly visible.
+        - paragraph [ref=e284]: — Jasim Mohamed Rabeek
+      - generic [ref=e285]:
+        - generic [ref=e286]: “
+        - paragraph [ref=e287]: Best car wash and detailing in Dubai. The owner, Aiman is a real petrolhead and most friendly person I have ever met! Guys at prestige have an eye for quality and attention to details. Forget about swirls and marks on windows after wash! Guys will make your car shine!
+        - paragraph [ref=e289]: — Paul Lompas
+      - generic [ref=e290]:
+        - generic [ref=e291]: “
+        - paragraph [ref=e292]: I recently brought my BMW to Prestige Car Detailing and I couldn't be happier with the results. The team did an outstanding job on the full interior dry clean — the cabin looks and smells brand new.
+        - paragraph [ref=e294]: — Amin Alkhadra
+      - generic [ref=e295]:
+        - generic [ref=e296]: “
+        - paragraph [ref=e297]: Went there with a huge dent in the driver's door. Done in one day, they even noticed a couple of other ones on the rear door, fixed them. Car looks almost like new, no paint, no traces. Top quality, fast service.
+        - paragraph [ref=e299]: — Mirza Hatk
+      - generic [ref=e300]:
+        - generic [ref=e301]: “
+        - paragraph [ref=e302]: One of the best treatments you can give to your car (and from personal experience, they always give you more than what they promise ✨).
+        - paragraph [ref=e304]: — Samer Abdel Malak
+      - generic [ref=e305]:
+        - generic [ref=e306]: “
+        - paragraph [ref=e307]: Outstanding job by Ayman. Got my car detailed, ceramic coated and added PPF on the front end. Excellent work with attention to details! Well done team.
+        - paragraph [ref=e309]: — Ali D
+      - generic [ref=e310]:
+        - generic [ref=e311]: “
+        - paragraph [ref=e312]: Fairly priced, excellent quality, and very honest people. I'm extremely happy with the ceramic coating they did.
+        - paragraph [ref=e314]: — Assyl
+      - generic [ref=e315]:
+        - generic [ref=e316]: “
+        - paragraph [ref=e317]: I got my car back yesterday evening and what an amazing work Prestige detailing has done (and was not the first time). They are extremely professional and the quality of work they offer and deliver is outstanding.
+        - paragraph [ref=e319]: — MrTheSof
+      - generic [ref=e320]:
+        - generic [ref=e321]: “
+        - paragraph [ref=e322]: Now the car's previously been ceramic coated by Prestige Detailing, but now, for preserving the bodywork for the long-term, I did the whole PPF package! The car is next level WOW! Looks amazing and has the benefit of self-healing PPF.
+        - paragraph [ref=e324]: — Paul Cheung
+      - generic [ref=e325]:
+        - generic [ref=e326]: “
+        - paragraph [ref=e327]: Prestige Car Detailing is by far thee best detailing place. The quality of products and Services they offer are unique and definitely value for money. A shout out to Ayman and his team.
+        - paragraph [ref=e329]: — Naazia Kardamey
+      - generic [ref=e330]:
+        - generic [ref=e331]: “
+        - paragraph [ref=e332]: I recently had the pleasure of experiencing the full range of services at Prestige Detailing, including car polish, detailing, and ceramic coating. Under the expert guidance of Mr. Aymen, my car has never looked better.
+        - paragraph [ref=e334]: — RISHI GUPTA
+      - generic [ref=e335]:
+        - generic [ref=e336]: “
+        - paragraph [ref=e337]: The exceptional service I received for my flooded car, swiftly restored to brand new, was truly extraordinary. I was ecstatic upon seeing my car, brought back to an even better state than before. Under the skilled leadership of Mr. Ayman.
+        - paragraph [ref=e339]: — Zaid Rayyan
+      - generic [ref=e340]:
+        - generic [ref=e341]: “
+        - paragraph [ref=e342]: Very impressed. We run a garage and We have run 6 cars through Ayman and the team so far. Outstanding service and every car is stunning. Not just normal detailing but heavy paint correction also. You will not be disappointed.
+        - paragraph [ref=e344]: — Colin Linklater
+      - generic [ref=e345]:
+        - generic [ref=e346]: “
+        - paragraph [ref=e347]: I honestly can't recommend any place better than this. You will get the best service for a fraction of the price that other places charge. Mr Ayman is not only professional but genuinely cares about every car he works on.
+        - paragraph [ref=e349]: — Ahmed Taha
+      - generic [ref=e350]:
+        - generic [ref=e351]: “
+        - paragraph [ref=e352]: Fantastic service! As a woman we always get a bit uncomfortable when we have to take our car for service but my experience in Prestige was completely different. Very honest and transparent from start to finish.
+        - paragraph [ref=e354]: — Fernanda Amaral
+      - generic [ref=e355]:
+        - generic [ref=e356]: “
+        - paragraph [ref=e357]: Superb service from Ayman and his team of detailers. Really good customer care before and after they carried out the ceramic paint protection on my car. They take care of the car as if its their own! Thoroughly recommended.
+        - paragraph [ref=e359]: — M Irv51
+      - generic [ref=e360]:
+        - generic [ref=e361]: “
+        - paragraph [ref=e362]: Ayman and the team at Prestige Detailing completed a fantastic paint restoration on my tired sun scorched Defender. The paint correction has brought the car back to beyond a showroom finish. Highly recommend.
+        - paragraph [ref=e364]: — Jad Bsaibes
+      - generic [ref=e365]:
+        - generic [ref=e366]: “
+        - paragraph [ref=e367]: I cannot recommend these guys enough. Brilliant service, great communication and reasonable prices. Mr. Ayman proved the exception when it comes to honesty. Friendly, honest and professional.
+        - paragraph [ref=e369]: — Pieter Ferreira
+      - generic [ref=e370]:
+        - generic [ref=e371]: “
+        - paragraph [ref=e372]: The experience was very comfortable, informative and honest, the service is 5 star and they refused to give me anything less than perfect.
+        - paragraph [ref=e374]: — Rami Yousef
+      - generic [ref=e375]:
+        - generic [ref=e376]: “
+        - paragraph [ref=e377]: The best detailing shop to ever exist in the UAE. They did a great job on my B5 Blue Challenger, completely transforming the way it looked. The only detailing shop I would trust with my cars.
+        - paragraph [ref=e379]: — bader alhunaity
+      - generic [ref=e380]:
+        - generic [ref=e381]: “
+        - paragraph [ref=e382]: Got my car PPF and tinting done by Prestige Detailing, and I couldn't be happier. The staff were extremely knowledgeable and took the time to clearly explain every step of the process.
+        - paragraph [ref=e384]: — Sair Riaz
+      - generic [ref=e385]:
+        - generic [ref=e386]: “
+        - paragraph [ref=e387]: Perfect experience at Prestige Detailing! They saved the paint of my John Cooper Works which the roof and body had been damaged by the rain and cement stains. The whole car now looks as if it was out from the showroom.
+        - paragraph [ref=e389]: — Charles Allainmat
+      - generic [ref=e390]:
+        - generic [ref=e391]: “
+        - paragraph [ref=e392]: What an experience! They are deeply into details, and so nice and reasonable! I would recommend 100 times! More than happy with the polishing, detailing and ceramic coating they did on my car.
+        - paragraph [ref=e394]: — laurent EDERY
+      - generic [ref=e395]:
+        - generic [ref=e396]: “
+        - paragraph [ref=e397]: I dropped my car off to have the exterior paint correction performed. The car was in pretty bad shape — swirl marks everywhere! It came back almost looking brand new! Very happy with the results.
+        - paragraph [ref=e399]: — Nick Faulkner
+      - generic [ref=e400]:
+        - generic [ref=e401]: “
+        - paragraph [ref=e402]: The services provided by Prestige Detailing is beyond expectations. A very dedicated team with great management and customer service, honestly very professional and on spot work. I highly recommend them.
+        - paragraph [ref=e404]: — Ahmad Marei
+      - generic [ref=e405]:
+        - generic [ref=e406]: “
+        - paragraph [ref=e407]: Been a regular at Prestige since 2020. The attention to details and quality is unmatched. The inspection of the car condition before the job and transformation of the condition is mind blowing. All supervised by the owner himself.
+        - paragraph [ref=e409]: — Ahmed Ghazi
+      - generic [ref=e410]:
+        - generic [ref=e411]: “
+        - paragraph [ref=e412]: Super professional and pays attention to detail. Probably the best detailers in Dubai with top notch products backed by the company that provides them.
+        - paragraph [ref=e414]: — Elias Odeh
+      - generic [ref=e415]:
+        - generic [ref=e416]: “
+        - paragraph [ref=e417]: Excellent customer service and unusually high attention to detail. Ayman, the owner, is passionate about what he does and this is reflected in the quality of the work.
+        - paragraph [ref=e419]: — David DC
+      - generic [ref=e420]:
+        - generic [ref=e421]: “
+        - paragraph [ref=e422]: Just got my Toyota Tundra back perfectly cleaned! Mr Ayman, thank you so so much for all the help you provided. My car had some mechanical issues and you took care of it as if it was your own.
+        - paragraph [ref=e424]: — Katia Berrabah
+      - generic [ref=e425]:
+        - generic [ref=e426]: “
+        - paragraph [ref=e427]: Its the right place for automotive detailing, service is up to perfection and the place feels like home. Warm welcoming staff. Highly recommend.
+        - paragraph [ref=e429]: — Janti Kinji
+      - generic [ref=e430]:
+        - generic [ref=e431]: “
+        - paragraph [ref=e432]: My place to go to when its about shining my car. Went back like new. Five stars isn't enough to rate.
+        - paragraph [ref=e434]: — Mohammad Kalbouneh
+      - generic [ref=e435]:
+        - generic [ref=e436]: “
+        - paragraph [ref=e437]: A great job by Aiman and team, took my Wrangler JLU in for ceramic coating, detailing and window tint. The work exceeded my expectation and was top top quality. In addition the work plan and updates were first class.
+        - paragraph [ref=e439]: — Anthony Wood
+      - generic [ref=e440]:
+        - generic [ref=e441]: “
+        - paragraph [ref=e442]: It all started back in 2023 when I first visited Prestige Detailing and met Ayman. The work was absolutely extraordinary — every panel treated with the kind of care you only see from true craftsmen.
+        - paragraph [ref=e444]: — J Qazi
+      - generic [ref=e445]:
+        - generic [ref=e446]: “
+        - paragraph [ref=e447]: I had a great experience at Prestige Auto dealing with Mr. Ayman and his team. They were professional, attentive, and delivered excellent detailing results. I highly recommend them to anyone looking for high-quality car detailing services.
+        - paragraph [ref=e449]: — Ahmad Alshamsi
+      - generic [ref=e450]:
+        - generic [ref=e451]: “
+        - paragraph [ref=e452]: This is the place to go if you want to have one of the best car care services in Dubai. Not only is there work immaculate but the owner is a great person and will always give solid and honest advice.
+        - paragraph [ref=e454]: — Adel Al Shishani
+      - generic [ref=e455]:
+        - generic [ref=e456]: “
+        - paragraph [ref=e457]: After nearly a month in the garage for a full restoration, I was ready to replace my car's entire interior—until Prestige Detailing worked their magic! The results were unbelievable; the interior looks brand new. Highly recommended!
+        - paragraph [ref=e459]: — Zaid Hamidi
+      - generic [ref=e460]:
+        - generic [ref=e461]: “
+        - paragraph [ref=e462]: I had a great experience at prestige auto dealing with Mr Ayman. He and his team paid great attention to detail and were very meticulous with their work. The process was very smooth and transparent, and I was consistently updated.
+        - paragraph [ref=e464]: — Osama Kandil
+      - generic [ref=e465]:
+        - generic [ref=e466]: “
+        - paragraph [ref=e467]: Guys, if you wish to have your car taking care of, only prestige. If you throw tailor, Artist, scientist, and chemist in a mixer you get Ayman. Prestige is a 5 star hotel for your car staycation.
+        - paragraph [ref=e469]: — Mohannad elumatec
+      - generic [ref=e470]:
+        - generic [ref=e471]: “
+        - paragraph [ref=e472]: I recently got ceramic coating done at Prestige Detailing, and I must say—they did an amazing job! The coating quality is very, very good, and the shine and protection on my car are clearly visible.
+        - paragraph [ref=e474]: — Jasim Mohamed Rabeek
+      - generic [ref=e475]:
+        - generic [ref=e476]: “
+        - paragraph [ref=e477]: Best car wash and detailing in Dubai. The owner, Aiman is a real petrolhead and most friendly person I have ever met! Guys at prestige have an eye for quality and attention to details. Forget about swirls and marks on windows after wash! Guys will make your car shine!
+        - paragraph [ref=e479]: — Paul Lompas
+      - generic [ref=e480]:
+        - generic [ref=e481]: “
+        - paragraph [ref=e482]: I recently brought my BMW to Prestige Car Detailing and I couldn't be happier with the results. The team did an outstanding job on the full interior dry clean — the cabin looks and smells brand new.
+        - paragraph [ref=e484]: — Amin Alkhadra
+      - generic [ref=e485]:
+        - generic [ref=e486]: “
+        - paragraph [ref=e487]: Went there with a huge dent in the driver's door. Done in one day, they even noticed a couple of other ones on the rear door, fixed them. Car looks almost like new, no paint, no traces. Top quality, fast service.
+        - paragraph [ref=e489]: — Mirza Hatk
+      - generic [ref=e490]:
+        - generic [ref=e491]: “
+        - paragraph [ref=e492]: One of the best treatments you can give to your car (and from personal experience, they always give you more than what they promise ✨).
+        - paragraph [ref=e494]: — Samer Abdel Malak
+      - generic [ref=e495]:
+        - generic [ref=e496]: “
+        - paragraph [ref=e497]: Outstanding job by Ayman. Got my car detailed, ceramic coated and added PPF on the front end. Excellent work with attention to details! Well done team.
+        - paragraph [ref=e499]: — Ali D
+      - generic [ref=e500]:
+        - generic [ref=e501]: “
+        - paragraph [ref=e502]: Fairly priced, excellent quality, and very honest people. I'm extremely happy with the ceramic coating they did.
+        - paragraph [ref=e504]: — Assyl
+      - generic [ref=e505]:
+        - generic [ref=e506]: “
+        - paragraph [ref=e507]: I got my car back yesterday evening and what an amazing work Prestige detailing has done (and was not the first time). They are extremely professional and the quality of work they offer and deliver is outstanding.
+        - paragraph [ref=e509]: — MrTheSof
+      - generic [ref=e510]:
+        - generic [ref=e511]: “
+        - paragraph [ref=e512]: Now the car's previously been ceramic coated by Prestige Detailing, but now, for preserving the bodywork for the long-term, I did the whole PPF package! The car is next level WOW! Looks amazing and has the benefit of self-healing PPF.
+        - paragraph [ref=e514]: — Paul Cheung
+      - generic [ref=e515]:
+        - generic [ref=e516]: “
+        - paragraph [ref=e517]: Prestige Car Detailing is by far thee best detailing place. The quality of products and Services they offer are unique and definitely value for money. A shout out to Ayman and his team.
+        - paragraph [ref=e519]: — Naazia Kardamey
+      - generic [ref=e520]:
+        - generic [ref=e521]: “
+        - paragraph [ref=e522]: I recently had the pleasure of experiencing the full range of services at Prestige Detailing, including car polish, detailing, and ceramic coating. Under the expert guidance of Mr. Aymen, my car has never looked better.
+        - paragraph [ref=e524]: — RISHI GUPTA
+      - generic [ref=e525]:
+        - generic [ref=e526]: “
+        - paragraph [ref=e527]: The exceptional service I received for my flooded car, swiftly restored to brand new, was truly extraordinary. I was ecstatic upon seeing my car, brought back to an even better state than before. Under the skilled leadership of Mr. Ayman.
+        - paragraph [ref=e529]: — Zaid Rayyan
+      - generic [ref=e530]:
+        - generic [ref=e531]: “
+        - paragraph [ref=e532]: Very impressed. We run a garage and We have run 6 cars through Ayman and the team so far. Outstanding service and every car is stunning. Not just normal detailing but heavy paint correction also. You will not be disappointed.
+        - paragraph [ref=e534]: — Colin Linklater
+      - generic [ref=e535]:
+        - generic [ref=e536]: “
+        - paragraph [ref=e537]: I honestly can't recommend any place better than this. You will get the best service for a fraction of the price that other places charge. Mr Ayman is not only professional but genuinely cares about every car he works on.
+        - paragraph [ref=e539]: — Ahmed Taha
+      - generic [ref=e540]:
+        - generic [ref=e541]: “
+        - paragraph [ref=e542]: Fantastic service! As a woman we always get a bit uncomfortable when we have to take our car for service but my experience in Prestige was completely different. Very honest and transparent from start to finish.
+        - paragraph [ref=e544]: — Fernanda Amaral
+      - generic [ref=e545]:
+        - generic [ref=e546]: “
+        - paragraph [ref=e547]: Superb service from Ayman and his team of detailers. Really good customer care before and after they carried out the ceramic paint protection on my car. They take care of the car as if its their own! Thoroughly recommended.
+        - paragraph [ref=e549]: — M Irv51
+      - generic [ref=e550]:
+        - generic [ref=e551]: “
+        - paragraph [ref=e552]: Ayman and the team at Prestige Detailing completed a fantastic paint restoration on my tired sun scorched Defender. The paint correction has brought the car back to beyond a showroom finish. Highly recommend.
+        - paragraph [ref=e554]: — Jad Bsaibes
+      - generic [ref=e555]:
+        - generic [ref=e556]: “
+        - paragraph [ref=e557]: I cannot recommend these guys enough. Brilliant service, great communication and reasonable prices. Mr. Ayman proved the exception when it comes to honesty. Friendly, honest and professional.
+        - paragraph [ref=e559]: — Pieter Ferreira
+      - generic [ref=e560]:
+        - generic [ref=e561]: “
+        - paragraph [ref=e562]: The experience was very comfortable, informative and honest, the service is 5 star and they refused to give me anything less than perfect.
+        - paragraph [ref=e564]: — Rami Yousef
+      - generic [ref=e565]:
+        - generic [ref=e566]: “
+        - paragraph [ref=e567]: The best detailing shop to ever exist in the UAE. They did a great job on my B5 Blue Challenger, completely transforming the way it looked. The only detailing shop I would trust with my cars.
+        - paragraph [ref=e569]: — bader alhunaity
+      - generic [ref=e570]:
+        - generic [ref=e571]: “
+        - paragraph [ref=e572]: Got my car PPF and tinting done by Prestige Detailing, and I couldn't be happier. The staff were extremely knowledgeable and took the time to clearly explain every step of the process.
+        - paragraph [ref=e574]: — Sair Riaz
+      - generic [ref=e575]:
+        - generic [ref=e576]: “
+        - paragraph [ref=e577]: Perfect experience at Prestige Detailing! They saved the paint of my John Cooper Works which the roof and body had been damaged by the rain and cement stains. The whole car now looks as if it was out from the showroom.
+        - paragraph [ref=e579]: — Charles Allainmat
+      - generic [ref=e580]:
+        - generic [ref=e581]: “
+        - paragraph [ref=e582]: What an experience! They are deeply into details, and so nice and reasonable! I would recommend 100 times! More than happy with the polishing, detailing and ceramic coating they did on my car.
+        - paragraph [ref=e584]: — laurent EDERY
+      - generic [ref=e585]:
+        - generic [ref=e586]: “
+        - paragraph [ref=e587]: I dropped my car off to have the exterior paint correction performed. The car was in pretty bad shape — swirl marks everywhere! It came back almost looking brand new! Very happy with the results.
+        - paragraph [ref=e589]: — Nick Faulkner
+      - generic [ref=e590]:
+        - generic [ref=e591]: “
+        - paragraph [ref=e592]: The services provided by Prestige Detailing is beyond expectations. A very dedicated team with great management and customer service, honestly very professional and on spot work. I highly recommend them.
+        - paragraph [ref=e594]: — Ahmad Marei
+      - generic [ref=e595]:
+        - generic [ref=e596]: “
+        - paragraph [ref=e597]: Been a regular at Prestige since 2020. The attention to details and quality is unmatched. The inspection of the car condition before the job and transformation of the condition is mind blowing. All supervised by the owner himself.
+        - paragraph [ref=e599]: — Ahmed Ghazi
+      - generic [ref=e600]:
+        - generic [ref=e601]: “
+        - paragraph [ref=e602]: Super professional and pays attention to detail. Probably the best detailers in Dubai with top notch products backed by the company that provides them.
+        - paragraph [ref=e604]: — Elias Odeh
+      - generic [ref=e605]:
+        - generic [ref=e606]: “
+        - paragraph [ref=e607]: Excellent customer service and unusually high attention to detail. Ayman, the owner, is passionate about what he does and this is reflected in the quality of the work.
+        - paragraph [ref=e609]: — David DC
+      - generic [ref=e610]:
+        - generic [ref=e611]: “
+        - paragraph [ref=e612]: Just got my Toyota Tundra back perfectly cleaned! Mr Ayman, thank you so so much for all the help you provided. My car had some mechanical issues and you took care of it as if it was your own.
+        - paragraph [ref=e614]: — Katia Berrabah
+      - generic [ref=e615]:
+        - generic [ref=e616]: “
+        - paragraph [ref=e617]: Its the right place for automotive detailing, service is up to perfection and the place feels like home. Warm welcoming staff. Highly recommend.
+        - paragraph [ref=e619]: — Janti Kinji
+      - generic [ref=e620]:
+        - generic [ref=e621]: “
+        - paragraph [ref=e622]: My place to go to when its about shining my car. Went back like new. Five stars isn't enough to rate.
+        - paragraph [ref=e624]: — Mohammad Kalbouneh
+      - generic [ref=e625]:
+        - generic [ref=e626]: “
+        - paragraph [ref=e627]: A great job by Aiman and team, took my Wrangler JLU in for ceramic coating, detailing and window tint. The work exceeded my expectation and was top top quality. In addition the work plan and updates were first class.
+        - paragraph [ref=e629]: — Anthony Wood
+    - link "Book Your Session" [ref=e631] [cursor=pointer]:
+      - /url: https://wa.me/971555096234
+  - generic [ref=e633]:
+    - generic [ref=e634]:
+      - img "Prestige Detailing studio — precision at work" [ref=e636]
+      - generic [ref=e637]:
+        - paragraph [ref=e638]: The Prestige difference
+        - heading "Why Dubai collectors trust Prestige." [level=2] [ref=e639]:
+          - text: Why Dubai collectors
+          - text: trust Prestige.
+        - generic [ref=e640]:
+          - generic [ref=e642]:
+            - generic [ref=e644]: "01"
+            - generic [ref=e645]:
+              - heading "Owner on the floor" [level=3] [ref=e646]
+              - paragraph [ref=e647]: Mr. Ayman physically inspects every compound pass, film fold, and edge wrap. There is no delegation on quality.
+          - generic [ref=e648]:
+            - generic [ref=e650]: "02"
+            - generic [ref=e651]:
+              - heading "Honest, always" [level=3] [ref=e652]
+              - paragraph [ref=e653]: If your paint has existing damage we cannot fix, we say so before we start — not after. You get a clear picture, every time.
+          - generic [ref=e654]:
+            - generic [ref=e656]: "03"
+            - generic [ref=e657]:
+              - heading "Lab-grade chemistry" [level=3] [ref=e658]
+              - paragraph [ref=e659]: Every product we use is sourced from the world's leading manufacturers. We do not compromise on the science behind the shine.
+          - generic [ref=e660]:
+            - generic [ref=e662]: "04"
+            - generic [ref=e663]:
+              - heading "Live progress on your phone" [level=3] [ref=e664]
+              - paragraph [ref=e665]: High-resolution photos and video updates sent directly via WhatsApp as each stage completes. No guessing.
+    - generic [ref=e666]:
+      - generic [ref=e667]:
+        - generic [ref=e668]: 10,000+
+        - generic [ref=e669]: Detailing hours
+      - generic [ref=e670]:
+        - generic [ref=e671]: 4.9★
+        - generic [ref=e672]: 100+ Google reviews
+      - generic [ref=e673]:
+        - generic [ref=e674]: DIP 2
+        - generic [ref=e675]: Dubai studio
+  - generic [ref=e677]:
+    - generic [ref=e678]:
+      - heading "Build your estimate." [level=2] [ref=e679]:
+        - text: Build your
+        - text: estimate.
+      - paragraph [ref=e680]: Select your vehicle class and services. Our estimator adjusts pricing in real-time based on panel surface area. No hidden charges — ever.
+    - generic [ref=e681]:
+      - generic [ref=e682]:
+        - generic [ref=e683]:
+          - paragraph [ref=e684]: Step 1 — Select vehicle class
+          - generic [ref=e685]:
+            - button "×1.2 Supercar Porsche 911, Ferrari F8, Lamborghini Aventador" [ref=e686] [cursor=pointer]:
+              - generic [ref=e687]:
+                - img [ref=e688]
+                - generic [ref=e692]: ×1.2
+              - generic [ref=e693]:
+                - generic [ref=e694]: Supercar
+                - generic [ref=e695]: Porsche 911, Ferrari F8, Lamborghini Aventador
+            - button "×1 Coupe / Sedan BMW M5, Mercedes E-Class, Audi RS6" [ref=e696] [cursor=pointer]:
+              - generic [ref=e697]:
+                - img [ref=e698]
+                - generic [ref=e702]: ×1
+              - generic [ref=e703]:
+                - generic [ref=e704]: Coupe / Sedan
+                - generic [ref=e705]: BMW M5, Mercedes E-Class, Audi RS6
+            - button "×1.3 Luxury SUV / Offroad G-Wagon, Defender, Nissan Patrol V8, Range Rover" [ref=e706] [cursor=pointer]:
+              - generic [ref=e707]:
+                - img [ref=e708]
+                - generic [ref=e712]: ×1.3
+              - generic [ref=e713]:
+                - generic [ref=e714]: Luxury SUV / Offroad
+                - generic [ref=e715]: G-Wagon, Defender, Nissan Patrol V8, Range Rover
+        - generic [ref=e716]:
+          - paragraph [ref=e717]: Step 2 — Choose services (multi-select)
+          - generic [ref=e718]:
+            - button "Self-Healing PPF (Paint Protection Film) From AED 8,500" [ref=e719] [cursor=pointer]:
+              - img [ref=e721]
+              - generic [ref=e723]:
+                - generic [ref=e724]: Self-Healing PPF (Paint Protection Film)
+                - generic [ref=e725]: From AED 8,500
+            - button "Nano-Ceramic Coating Protection From AED 1,800" [ref=e726] [cursor=pointer]:
+              - generic [ref=e728]:
+                - generic [ref=e729]: Nano-Ceramic Coating Protection
+                - generic [ref=e730]: From AED 1,800
+            - button "Multi-Stage Paint Correction & Polish From AED 1,200" [ref=e731] [cursor=pointer]:
+              - generic [ref=e733]:
+                - generic [ref=e734]: Multi-Stage Paint Correction & Polish
+                - generic [ref=e735]: From AED 1,200
+            - button "Premium Heat-Rejection Window Tinting From AED 900" [ref=e736] [cursor=pointer]:
+              - generic [ref=e738]:
+                - generic [ref=e739]: Premium Heat-Rejection Window Tinting
+                - generic [ref=e740]: From AED 900
+            - button "Luxury Cabin Interior Deep Cleaning From AED 600" [ref=e741] [cursor=pointer]:
+              - generic [ref=e743]:
+                - generic [ref=e744]: Luxury Cabin Interior Deep Cleaning
+                - generic [ref=e745]: From AED 600
+            - button "Exceptional Flood & Water Damage Recovery From AED 2,500" [ref=e746] [cursor=pointer]:
+              - generic [ref=e748]:
+                - generic [ref=e749]: Exceptional Flood & Water Damage Recovery
+                - generic [ref=e750]: From AED 2,500
+            - button "Paintless Dent Repair (PDR) From AED 400" [ref=e751] [cursor=pointer]:
+              - generic [ref=e753]:
+                - generic [ref=e754]: Paintless Dent Repair (PDR)
+                - generic [ref=e755]: From AED 400
+      - generic [ref=e757]:
+        - generic [ref=e758]:
+          - generic [ref=e759]: Studio Estimator
+          - generic [ref=e760]:
+            - generic [ref=e761]: "Vehicle: Supercar ×1.2"
+            - generic [ref=e762]:
+              - generic [ref=e763]: Self-Healing PPF (Paint Protection Film)
+              - generic [ref=e764]: AED 8,500
+        - generic [ref=e765]:
+          - generic [ref=e766]:
+            - generic [ref=e767]: Total estimate
+            - generic [ref=e768]:
+              - generic [ref=e769]: AED 10,200
+              - generic [ref=e770]: + honest advice guarantee
+          - link "Book via WhatsApp" [ref=e771] [cursor=pointer]:
+            - /url: https://wa.me/971555096234?text=Hi%20Ayman!%20I%20just%20built%20my%20detailing%20package%20online%3A%0A%0A%F0%9F%9A%99%20Car%3A%20Supercar%20(Porsche%20911%2C%20Ferrari%20F8%2C%20Lamborghini%20Aventador)%0A%F0%9F%9B%A1%EF%B8%8F%20Services%3A%20Self-Healing%20PPF%20(Paint%20Protection%20Film)%0A%F0%9F%92%B0%20Estimated%3A%20AED%2010%2C200%0A%0AWhat's%20your%20earliest%20available%20slot%3F
+            - img [ref=e772]
+            - text: Book via WhatsApp
+          - paragraph [ref=e774]: Estimate based on basic configuration. No unexpected up-charges.
+  - generic [ref=e776]:
+    - generic [ref=e777]:
+      - paragraph [ref=e778]: Technical reference
+      - heading "Frequently asked" [level=2] [ref=e779]
+      - paragraph [ref=e780]: Granular facts on molecular nano bonds, film thicknesses, and paint recovery metrics.
+    - generic [ref=e781]:
+      - generic [ref=e782]:
+        - button "How long does a full PPF application take at your Dubai Investment Park location?" [expanded] [ref=e783] [cursor=pointer]:
+          - heading "How long does a full PPF application take at your Dubai Investment Park location?" [level=3] [ref=e784]
+          - img [ref=e786]
+        - generic [ref=e789]:
+          - paragraph [ref=e790]: A high-end, professional PPF (Paint Protection Film) application typically takes between 3 to 5 business days. This precise timeline incorporates careful exterior preparation, deep chemical clay-bar decontamination, fine multi-stage paint correction to lock in absolute clarity, meticulous dry fitments, clean seam edges folding under body panels, and a rigorous 24-hour heat-lock inspection phase to ensure the film will never peel under severe Dubai sun conditions.
+          - link "WhatsApp Us" [ref=e791] [cursor=pointer]:
+            - /url: https://wa.me/971555096234
+            - text: WhatsApp Us
+            - img [ref=e792]
+      - button "What is the absolute difference between Ceramic Coating and Paint Protection Film (PPF)?" [ref=e796] [cursor=pointer]:
+        - heading "What is the absolute difference between Ceramic Coating and Paint Protection Film (PPF)?" [level=3] [ref=e797]
+        - img [ref=e799]
+      - button "Will self-healing film really heal scratches under the Dubai sun?" [ref=e802] [cursor=pointer]:
+        - heading "Will self-healing film really heal scratches under the Dubai sun?" [level=3] [ref=e803]
+        - img [ref=e805]
+      - button "Can you restore heavily sun-scorched paint or cement-stained bodywork?" [ref=e808] [cursor=pointer]:
+        - heading "Can you restore heavily sun-scorched paint or cement-stained bodywork?" [level=3] [ref=e809]
+        - img [ref=e811]
+      - button "How do I maintain my car after receiving your 9H Nano-Ceramic Coating?" [ref=e814] [cursor=pointer]:
+        - heading "How do I maintain my car after receiving your 9H Nano-Ceramic Coating?" [level=3] [ref=e815]
+        - img [ref=e817]
+  - generic [ref=e820]:
+    - generic [ref=e821]:
+      - generic [ref=e822]: VISIT OUR AUTOMOTIVE STUDIO
+      - heading "LOCATION & HOURS" [level=2] [ref=e823]
+      - paragraph [ref=e824]: Prestige Detailing is based inside the prestigious Dubai Investment Park (DIP) Second. Drop by for honest advice, coffee, or to inspect active supercar correction projects.
+    - generic [ref=e825]:
+      - generic [ref=e826]:
+        - generic [ref=e828]:
+          - img [ref=e830]
+          - generic [ref=e833]:
+            - heading "STUDIO ADDRESS" [level=4] [ref=e834]
+            - paragraph [ref=e835]:
+              - text: Prestige Detailing UAE
+              - text: 61 Street - 2 2/4 - Dubai Investment Park Second - Dubai
+            - paragraph [ref=e836]: DIP 2 Close to Roundabout
+            - generic [ref=e837]:
+              - heading "TELEPHONE" [level=4] [ref=e838]
+              - link "+971 55 509 6234" [ref=e839] [cursor=pointer]:
+                - /url: tel:+971555096234
+        - generic [ref=e840]:
+          - heading "WEEKLY STUDIO HOURS" [level=4] [ref=e841]
+          - generic [ref=e842]:
+            - generic [ref=e843]:
+              - generic [ref=e844]:
+                - generic [ref=e845]: Thursday
+                - generic [ref=e846]: Today
+              - generic [ref=e847]: 9:00 AM – 8:00 PM
+            - generic [ref=e848]:
+              - generic [ref=e850]: Friday
+              - generic [ref=e851]: 9:00 AM – 8:00 PM
+            - generic [ref=e852]:
+              - generic [ref=e854]: Saturday
+              - generic [ref=e855]: 9:00 AM – 8:00 PM
+            - generic [ref=e856]:
+              - generic [ref=e858]: Sunday
+              - generic [ref=e859]: 9:00 AM – 8:00 PM
+            - generic [ref=e860]:
+              - generic [ref=e862]: Monday
+              - generic [ref=e863]: 9:00 AM – 8:00 PM
+            - generic [ref=e864]:
+              - generic [ref=e866]: Tuesday
+              - generic [ref=e867]: 9:00 AM – 8:00 PM
+            - generic [ref=e868]:
+              - generic [ref=e870]: Wednesday
+              - generic [ref=e871]: Closed
+      - iframe [ref=e873]
+  - generic [ref=e874]:
+    - img "Prestige Detailing studio" [ref=e876]
+    - generic [ref=e880]:
+      - paragraph [ref=e881]: Private bookings only
+      - heading "Your car. Protected." [level=2] [ref=e882]:
+        - text: Your car.
+        - text: Protected.
+      - paragraph [ref=e883]: Book directly with Ayman. No call centres, no forms — a real conversation about what your car needs, and what it will take to get it there.
+      - generic [ref=e884]:
+        - link "Book on WhatsApp" [ref=e885] [cursor=pointer]:
+          - /url: https://wa.me/971555096234?text=Hi%20Ayman!%20I'd%20like%20to%20book%20a%20slot%20for%20my%20vehicle.%20Can%20we%20discuss%20the%20best%20service%20package%3F
+          - img [ref=e886]
+          - text: Book on WhatsApp
+        - link "Call directly" [ref=e888] [cursor=pointer]:
+          - /url: tel:0555096234
+  - contentinfo [ref=e889]:
+    - generic [ref=e890]:
+      - generic [ref=e891]:
+        - generic [ref=e892]:
+          - button "PRESTIGE DETAILING" [ref=e893] [cursor=pointer]:
+            - generic [ref=e894]: PRESTIGE
+            - generic [ref=e895]: DETAILING
+          - paragraph [ref=e896]: Leading Dubai's automotive aesthetic craft from our bespoke vehicle care studio in DIP 2.
+          - generic [ref=e897]:
+            - link "Facebook" [ref=e898] [cursor=pointer]:
+              - /url: https://facebook.com/prestigedetailing.uae
+              - img [ref=e899]
+            - link "Instagram" [ref=e901] [cursor=pointer]:
+              - /url: https://instagram.com/prestigedetailing.uae
+              - img [ref=e902]
+            - link "WhatsApp" [ref=e905] [cursor=pointer]:
+              - /url: https://wa.me/971555096234
+              - img [ref=e906]
+        - generic [ref=e908]:
+          - heading "QUICK LINKS" [level=4] [ref=e909]
+          - generic [ref=e910]:
+            - button "Home" [ref=e911] [cursor=pointer]
+            - button "About us" [ref=e912] [cursor=pointer]
+            - button "Contact" [ref=e913] [cursor=pointer]
+            - button "Reviews" [ref=e914] [cursor=pointer]
+            - button "Price Calculator" [ref=e915] [cursor=pointer]
+        - generic [ref=e916]:
+          - heading "SERVICES" [level=4] [ref=e917]
+          - generic [ref=e918]:
+            - button "Paint Protection Film" [ref=e919] [cursor=pointer]
+            - button "Ceramic Coating" [ref=e920] [cursor=pointer]
+            - button "Car Detailing Dubai" [ref=e921] [cursor=pointer]
+            - button "Interior Detailing" [ref=e922] [cursor=pointer]
+            - button "Exterior Detailing" [ref=e923] [cursor=pointer]
+            - button "Car Polishing Dubai" [ref=e924] [cursor=pointer]
+        - generic [ref=e925]:
+          - heading "CAN WE HELP?" [level=4] [ref=e926]
+          - generic [ref=e927]:
+            - link "WhatsApp" [ref=e928] [cursor=pointer]:
+              - /url: https://wa.me/971555096234
+              - img [ref=e929]
+              - generic [ref=e931]: WhatsApp
+            - link "Email Us" [ref=e932] [cursor=pointer]:
+              - /url: mailto:info@prestigedetailing.ae
+              - img [ref=e933]
+              - generic [ref=e936]: Email Us
+            - link "Get Directions" [ref=e937] [cursor=pointer]:
+              - /url: https://maps.google.com/?q=Prestige+Detailing+Dubai+Investment+Park+Second
+              - img [ref=e938]
+              - generic [ref=e941]: Get Directions
+      - paragraph [ref=e943]: © 2026 Prestige Detailing UAE. All Rights Reserved.

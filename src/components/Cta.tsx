@@ -50,7 +50,7 @@ export default function Cta() {
         <div style={{ marginBottom: 'var(--space-3xl)' }}>
           <h2 style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'var(--text-display)',
+            fontSize: 'clamp(2.5rem, 4vw + 1rem, 4rem)',
             fontWeight: 800,
             letterSpacing: '-0.04em',
             lineHeight: 1.0,
@@ -230,7 +230,7 @@ export default function Cta() {
                         flexShrink: 0, marginTop: '0.125rem',
                         transition: 'background var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out)',
                       }}>
-                        {checked && <Check style={{ width: '0.75rem', height: '0.75rem', color: 'var(--color-accent-ink)', strokeWidth: 3 }} />}
+                        {checked && <Check style={{ width: '0.75rem', height: '0.75rem', color: 'var(--color-paper)', strokeWidth: 3 }} />}
                       </div>
                       <div style={{ flex: 1 }}>
                         <div style={{
@@ -273,7 +273,7 @@ export default function Cta() {
               <div style={{
                 position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)',
                 width: '16rem', height: '8rem',
-                background: 'radial-gradient(ellipse, var(--color-bloom) 0%, transparent 70%)',
+                background: 'radial-gradient(ellipse, var(--color-bloom-1) 0%, transparent 70%)',
                 pointerEvents: 'none',
               }} />
 
@@ -384,7 +384,7 @@ export default function Cta() {
                     padding: '0.875rem',
                     borderRadius: 'var(--radius-full)',
                     background: 'var(--color-accent)',
-                    color: 'var(--color-accent-ink)',
+                    color: 'var(--color-paper)',
                     fontFamily: 'var(--font-display)',
                     fontSize: 'var(--text-xs)', fontWeight: 700,
                     letterSpacing: '0.08em', textTransform: 'uppercase',

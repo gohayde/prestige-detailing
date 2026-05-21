@@ -63,15 +63,9 @@ export default function Stats() {
               PRECISION <br />
               <span className="text-[#FFCA2B]">WITHOUT LIMITS</span>
             </h2>
-            <div className="flex flex-col gap-4 text-base sm:text-[17px] leading-relaxed font-sans font-medium" style={{ color: 'var(--color-ink-2)', maxWidth: '68ch' }}>
+            <div className="flex flex-col gap-4 text-base sm:text-[17px] leading-relaxed font-sans font-medium" style={{ color: 'var(--color-ink-2)', maxWidth: '58ch' }}>
               <p>
-                At Prestige Detailing, we break industry standards with a clinical paint protection laboratory powered by an elite team of world-class female detailing specialists and master artisans. Our specialists bring unparalleled focus and surgical micro-precision to every vehicle.
-              </p>
-              <p>
-                Beginning their careers on day one with advanced clay-bar decontamination and high-intensity paint thickness testing, they master the delicate physical science of paint surface structures. Through technical development, they progress to multi-stage rotary compounding and the intricate art of hand-folding self-healing thermo-elastomer Paint Protection Film (PPF).
-              </p>
-              <p>
-                Their hyper-focused vision and patient dedication ensure perfectly tucked clean edge alignments, seamless seams, and glass-like mirror finishes on Dubai's rarest hypercars.
+                At Prestige Detailing, we operate a clinical paint protection studio inside Dubai Investment Park 2. Every vehicle receives advanced clay-bar decontamination, paint thickness mapping, multi-stage rotary compounding, and hand-folded self-healing PPF — all personally supervised by Mr. Ayman from intake to delivery.
               </p>
             </div>
           </div>
@@ -137,12 +131,6 @@ export default function Stats() {
 
         </div>
 
-        {/* Brand visual detail */}
-        <div className="mt-12 text-center select-none pointer-events-none opacity-20">
-          <span className="text-6xl sm:text-8xl md:text-[8rem] font-sans font-black text-stone-900 uppercase tracking-widest leading-none block">
-            PRESTIGE
-          </span>
-        </div>
 
       </div>
     </section>

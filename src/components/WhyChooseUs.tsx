@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
             {/* Rightward fade — blends into the text column */}
             <div style={{
               position: 'absolute', inset: 0,
-              background: 'linear-gradient(to right, transparent 55%, var(--color-paper) 100%)',
+              background: 'linear-gradient(to right, transparent 70%, var(--color-paper) 100%)',
               pointerEvents: 'none',
             }} />
             {/* Bottom fade */}
@@ -215,7 +215,7 @@ export default function WhyChooseUs() {
               key={item.label}
               style={{
                 display: 'flex', flexDirection: 'column', alignItems: 'center',
-                padding: '0.75rem 3rem',
+                padding: '1.25rem 4rem',
                 borderRight: i < trustLine.length - 1 ? '1px solid var(--color-rule)' : 'none',
               }}
             >

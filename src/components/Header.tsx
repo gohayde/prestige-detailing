@@ -88,6 +88,7 @@ export default function Header({ onNavClick, activeSection }: HeaderProps) {
                 <button
                   key={link.id}
                   onClick={() => handleClick(link.id)}
+                  className={isActive ? undefined : 'nav-pill'}
                   style={{
                     padding: '0.375rem 0.875rem',
                     borderRadius: 'var(--radius-full)',
@@ -98,22 +99,9 @@ export default function Header({ onNavClick, activeSection }: HeaderProps) {
                     fontWeight: isActive ? 700 : 500,
                     letterSpacing: '0.06em',
                     textTransform: 'uppercase',
-                    transition: `background var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out)`,
                     background: isActive ? 'var(--color-accent)' : 'transparent',
                     color: isActive ? 'var(--color-paper)' : 'var(--color-ink-2)',
                     whiteSpace: 'nowrap',
-                  }}
-                  onMouseEnter={(e) => {
-                    if (!isActive) {
-                      (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-ink)';
-                      (e.currentTarget as HTMLButtonElement).style.background = 'oklch(22% 0.012 45)';
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (!isActive) {
-                      (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-ink-2)';
-                      (e.currentTarget as HTMLButtonElement).style.background = 'transparent';
-                    }
                   }}
                 >
                   {link.label}
@@ -126,6 +114,7 @@ export default function Header({ onNavClick, activeSection }: HeaderProps) {
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }} className="hidden md:flex">
             <a
               href="tel:0555096234"
+              className="btn-ghost"
               style={{
                 display: 'flex', alignItems: 'center', gap: '0.375rem',
                 padding: '0.5rem 1rem',
@@ -138,16 +127,7 @@ export default function Header({ onNavClick, activeSection }: HeaderProps) {
                 textTransform: 'uppercase',
                 color: 'var(--color-ink-2)',
                 textDecoration: 'none',
-                transition: `border-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out)`,
                 whiteSpace: 'nowrap',
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--color-accent)';
-                (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-ink)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--color-rule)';
-                (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-ink-2)';
               }}
             >
               <Phone style={{ width: '0.75rem', height: '0.75rem', color: 'var(--color-accent)' }} />
@@ -155,6 +135,7 @@ export default function Header({ onNavClick, activeSection }: HeaderProps) {
             </a>
             <a
               href="tel:0555096234"
+              className="btn-header-book"
               style={{
                 display: 'flex', alignItems: 'center', gap: '0.375rem',
                 padding: '0.5rem 1rem',
@@ -168,16 +149,7 @@ export default function Header({ onNavClick, activeSection }: HeaderProps) {
                 textTransform: 'uppercase',
                 color: 'var(--color-paper)',
                 textDecoration: 'none',
-                transition: `background var(--dur-micro) var(--ease-out), transform var(--dur-micro) var(--ease-out)`,
                 whiteSpace: 'nowrap',
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = 'oklch(90% 0.170 88)';
-                (e.currentTarget as HTMLAnchorElement).style.transform = 'scale(1.03)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = 'var(--color-accent)';
-                (e.currentTarget as HTMLAnchorElement).style.transform = 'scale(1)';
               }}
             >
               Book Now
