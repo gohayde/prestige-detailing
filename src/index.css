@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@1,400;1,500;1,700&family=Space+Grotesk:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -17,8 +17,8 @@
   --radius-xl: 1rem;
   --radius-lg: 0.75rem;
   --radius-sm: 0.25rem;
-  --shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(255, 202, 43, 0.35);
+  --shadow-card: 0 25px 50px -12px oklch(0% 0 0 / 0.55);
+  --shadow-glow: 0 0 24px oklch(85% 0.170 88 / 0.30);
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-outlier: "Space Grotesk", sans-serif;
@@ -27,14 +27,21 @@
   --text-base: 1rem;
   --text-xl: 1.25rem;
   --text-display-s: clamp(2rem, 3.5vw + 1rem, 3rem);
-  --color-accent: #FFCA2B;
-  --color-paper: #000000;
-  --color-paper-2: #0c0c0c;
-  --color-bloom-1: rgba(255, 202, 43, 0.08);
-  --color-ink: #ffffff;
-  --color-ink-2: #d6d3d1; /* stone-300 */
-  --color-rule: #262626;  /* stone-800 */
-  --color-muted: #737373; /* neutral-500 */
+
+  /* Colors — OKLCH throughout, tinted toward hue 88 (gold) */
+  --color-accent:   oklch(85% 0.170 88);   /* primary gold — CTAs only */
+  --color-accent-2: oklch(85% 0.170 88 / 0.5); /* gold at half presence — secondary uses */
+  --color-accent-3: oklch(85% 0.170 88 / 0.15); /* gold at low presence — backgrounds */
+  --color-paper:    oklch(8% 0.008 88);    /* near-black, warm tint */
+  --color-paper-2:  oklch(10% 0.009 88);   /* slightly lifted surface */
+  --color-paper-3:  oklch(13% 0.010 88);   /* card surface */
+  --color-bloom-1:  oklch(85% 0.170 88 / 0.07);
+  --color-ink:      oklch(96% 0.006 88);   /* near-white, warm tint */
+  --color-ink-2:    oklch(75% 0.008 88);   /* secondary text */
+  --color-rule:     oklch(22% 0.010 88);   /* borders */
+  --color-rule-2:   oklch(17% 0.008 88);   /* subtle dividers */
+  --color-muted:    oklch(50% 0.008 88);   /* placeholder / muted */
+
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
@@ -43,6 +50,11 @@
   --space-2xl: 3.5rem;
   --space-3xl: 5rem;
   --space-4xl: 7rem;
+}
+
+::selection {
+  background: oklch(85% 0.170 88);
+  color: oklch(8% 0.008 88);
 }
 
 @keyframes marquee-scroll {

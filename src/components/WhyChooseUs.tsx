@@ -3,140 +3,244 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
 import { motion } from 'motion/react';
-import { Star, ShieldAlert, Award, Send, CheckCircle } from 'lucide-react';
+
+const pillars = [
+  {
+    index: '01',
+    title: 'Owner on the floor',
+    body: 'Mr. Ayman physically inspects every compound pass, film fold, and edge wrap. There is no delegation on quality.',
+  },
+  {
+    index: '02',
+    title: 'Honest, always',
+    body: 'If your paint has existing damage we cannot fix, we say so before we start — not after. You get a clear picture, every time.',
+  },
+  {
+    index: '03',
+    title: 'Lab-grade chemistry',
+    body: 'Every product we use is sourced from the world\'s leading manufacturers. We do not compromise on the science behind the shine.',
+  },
+  {
+    index: '04',
+    title: 'Live progress on your phone',
+    body: 'High-resolution photos and video updates sent directly via WhatsApp as each stage completes. No guessing.',
+  },
+];
+
+const trustLine = [
+  { value: '10,000+', label: 'Detailing hours' },
+  { value: '4.9★', label: '100+ Google reviews' },
+  { value: 'DIP 2', label: 'Dubai studio' },
+];
 
 export default function WhyChooseUs() {
-  const cards = [
-    {
-      icon: (
-        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#FFCA2B]/10 border border-[#FFCA2B]/30 text-[#FFCA2B]">
-          <Star className="w-6 h-6 fill-current" />
-        </div>
-      ),
-      title: "4.9 Google Rating",
-      metric: "★ 4.9 / 5.0",
-      sub: "100% VERIFIED",
-      description: "Over 100 verified 5-star reviews from Dubai's private supercar collectors, luxury car enthusiasts, and daily drivers who value absolute precision over high-volume speed."
-    },
-    {
-      icon: (
-        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#FFCA2B]/10 border border-[#FFCA2B]/30 text-[#FFCA2B]">
-          <ShieldAlert className="w-6 h-6" />
-        </div>
-      ),
-      title: "Honest Expert Advice",
-      metric: "100%",
-      sub: "HONESTY POLICY",
-      description: "We are auto enthusiasts first, salespeople second. If your bumper has pre-existing issues or complex custom angles, we won't sugarcoat it. You receive transparent technical feedback upfront."
-    },
-    {
-      icon: (
-        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#FFCA2B]/10 border border-[#FFCA2B]/30 text-[#FFCA2B]">
-          <Award className="w-6 h-6" />
-        </div>
-      ),
-      title: "We Treat It Like Our Own",
-      metric: "1-on-1 Care",
-      sub: "OWNER SUPERVISED",
-      description: "Under the passionate, eagle-eyed direction of Mr. Ayman, our detailing bay operates with surgical standards. Every chemical compound, buffer path, and edge wrap is physically inspected."
-    },
-    {
-      icon: (
-        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#FFCA2B]/10 border border-[#FFCA2B]/30 text-[#FFCA2B]">
-          <Send className="w-6 h-6" />
-        </div>
-      ),
-      title: "WhatsApp Progress Updates",
-      metric: "Real-time",
-      sub: "FULL TRANSPARENCY",
-      description: "Never wonder about the state of your car. Rest or work in our luxury lounge, or receive high-resolution photo and video updates directly on your phone as we complete each stage."
-    }
-  ];
-
   return (
-    <section id="why-choose-us" className="relative py-28 bg-[#090909] overflow-hidden border-t border-stone-900">
-      {/* Visual background details */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#FFCA2B]/5 rounded-full filter blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-0 right-10 w-96 h-96 bg-white/[0.02] rounded-full filter blur-[100px] pointer-events-none" />
+    <section
+      id="why-choose-us"
+      style={{ background: 'var(--color-paper)', borderTop: '1px solid var(--color-rule)' }}
+      className="relative overflow-hidden"
+    >
+      {/* Ambient bloom — kept very subtle */}
+      <div
+        style={{
+          position: 'absolute', top: '40%', left: '35%',
+          width: '40rem', height: '40rem',
+          background: 'var(--color-bloom-1)',
+          borderRadius: '50%', filter: 'blur(140px)', pointerEvents: 'none',
+        }}
+      />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
-        {/* Title Group */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-20">
-          <span className="text-xs font-mono tracking-[0.25em] text-[#FFCA2B] uppercase font-bold mb-3 block">
-            THE PRESTIGE BENCHMARK
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight leading-tight">
-            WHY DUBAI COLLECTORS <br />
-            <span className="text-stone-400">CHOOSE PRESTIGE DETAILING</span>
-          </h2>
-          <div className="h-1 w-20 bg-[#FFCA2B] mt-6 rounded-full" />
-        </div>
+      <div style={{ maxWidth: '80rem', margin: '0 auto', position: 'relative', zIndex: 1 }}>
 
-        {/* Dynamic Responsive Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-          {cards.map((card, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
+        {/* Full-bleed asymmetric split — no padding on the grid itself so image bleeds */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[680px]">
+
+          {/* Left — studio image, full height, no radius, bleeds to edge */}
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            style={{ position: 'relative', overflow: 'hidden', minHeight: '480px' }}
+          >
+            <img
+              src="/images/maybach.png"
+              alt="Prestige Detailing studio — precision at work"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80';
+              }}
+            />
+            {/* Rightward fade — blends into the text column */}
+            <div style={{
+              position: 'absolute', inset: 0,
+              background: 'linear-gradient(to right, transparent 55%, var(--color-paper) 100%)',
+              pointerEvents: 'none',
+            }} />
+            {/* Bottom fade */}
+            <div style={{
+              position: 'absolute', bottom: 0, left: 0, right: 0, height: '30%',
+              background: 'linear-gradient(to top, var(--color-paper), transparent)',
+              pointerEvents: 'none',
+            }} />
+          </motion.div>
+
+          {/* Right — editorial text column */}
+          <div style={{ padding: 'clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 4rem) clamp(3rem, 6vw, 6rem) clamp(1rem, 3vw, 2rem)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+
+            {/* Section label */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="group relative rounded-3xl bg-black border border-stone-850 p-8 hover:border-[#FFCA2B]/40 hover:shadow-[0_15px_40px_rgba(0,0,0,0.6)] transition-all duration-300 flex flex-col justify-between"
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              style={{
+                fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)',
+                letterSpacing: '0.22em', textTransform: 'uppercase',
+                color: 'var(--color-muted)', marginBottom: '1.5rem',
+              }}
             >
-              {/* Subtle continuous golden glow lines inside */}
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#FFCA2B]/10 to-transparent group-hover:via-[#FFCA2B]/40 transition-all duration-500" />
-              
-              <div>
-                {/* Upper banner of the card */}
-                <div className="flex items-start justify-between gap-4 mb-6">
-                  {card.icon}
-                  <div className="text-right">
-                    <span className="text-xl sm:text-2xl font-mono font-black text-[#FFCA2B] block tracking-tight">
-                      {card.metric}
-                    </span>
-                    <span className="text-[9px] font-mono tracking-widest text-[#FFCA2B]/60 font-black block mt-0.5">
-                      {card.sub}
+              The Prestige difference
+            </motion.p>
+
+            {/* Headline — weight contrast, no uppercase shouting */}
+            <motion.h2
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(2rem, 3vw + 1rem, 3.25rem)',
+                fontWeight: 800,
+                letterSpacing: '-0.03em',
+                lineHeight: 1.1,
+                color: 'var(--color-ink)',
+                marginBottom: '3rem',
+              }}
+            >
+              Why Dubai collectors<br />
+              trust Prestige.
+            </motion.h2>
+
+            {/* Numbered pillars — sparse, editorial, no cards */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0', position: 'relative' }}>
+              {/* Vertical rule connecting the numbered items */}
+              <div style={{
+                position: 'absolute', left: '1.35rem', top: '2rem', bottom: '2rem',
+                width: '1px', background: 'var(--color-rule)',
+              }} />
+
+              {pillars.map((p, i) => (
+                <motion.div
+                  key={p.index}
+                  initial={{ opacity: 0, x: 16 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.65, delay: 0.1 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '2.75rem 1fr',
+                    gap: '0 1.25rem',
+                    paddingBottom: i < pillars.length - 1 ? '2rem' : 0,
+                    paddingTop: i > 0 ? '2rem' : 0,
+                    borderTop: i > 0 ? '1px solid var(--color-rule-2)' : 'none',
+                    position: 'relative',
+                  }}
+                >
+                  {/* Index number — acts as the visual node on the line */}
+                  <div style={{
+                    width: '2.75rem', height: '2.75rem', borderRadius: '50%',
+                    border: '1px solid var(--color-rule)',
+                    background: 'var(--color-paper)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    flexShrink: 0, zIndex: 1,
+                  }}>
+                    <span style={{
+                      fontFamily: 'var(--font-mono)', fontSize: '0.6875rem',
+                      fontWeight: 600, letterSpacing: '0.05em',
+                      color: 'var(--color-accent)',
+                    }}>
+                      {p.index}
                     </span>
                   </div>
-                </div>
 
-                <h3 className="text-lg sm:text-xl font-bold text-white tracking-wide uppercase mb-3">
-                  {card.title}
-                </h3>
-                <p className="text-stone-400 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
-                  {card.description}
-                </p>
-              </div>
+                  {/* Text */}
+                  <div>
+                    <h3 style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: '0.9375rem',
+                      fontWeight: 700,
+                      color: 'var(--color-ink)',
+                      marginBottom: '0.4rem',
+                      letterSpacing: '-0.01em',
+                    }}>
+                      {p.title}
+                    </h3>
+                    <p style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.8125rem',
+                      fontWeight: 400,
+                      lineHeight: 1.65,
+                      color: 'var(--color-ink-2)',
+                      maxWidth: '46ch',
+                    }}>
+                      {p.body}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
 
-              {/* Bottom tag indicator */}
-              <div className="flex items-center gap-2 text-stone-600 group-hover:text-[#FFCA2B]/70 transition-colors text-[10px] font-mono tracking-wider font-bold uppercase mt-auto">
-                <CheckCircle className="w-3.5 h-3.5" />
-                <span>Verified Studio Pillar</span>
-              </div>
-            </motion.div>
+          </div>
+        </div>
+
+        {/* Bottom trust bar — full bleed strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          style={{
+            borderTop: '1px solid var(--color-rule)',
+            display: 'flex', justifyContent: 'center',
+            flexWrap: 'wrap',
+            padding: '2rem var(--space-lg)',
+            gap: '0',
+          }}
+        >
+          {trustLine.map((item, i) => (
+            <div
+              key={item.label}
+              style={{
+                display: 'flex', flexDirection: 'column', alignItems: 'center',
+                padding: '0.75rem 3rem',
+                borderRight: i < trustLine.length - 1 ? '1px solid var(--color-rule)' : 'none',
+              }}
+            >
+              <span style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
+                fontWeight: 800,
+                letterSpacing: '-0.02em',
+                color: 'var(--color-ink)',
+              }}>
+                {item.value}
+              </span>
+              <span style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.6875rem',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'var(--color-muted)',
+                marginTop: '0.25rem',
+              }}>
+                {item.label}
+              </span>
+            </div>
           ))}
-        </div>
-
-        {/* Small horizontal trust bar */}
-        <div className="mt-20 py-8 px-6 sm:px-12 rounded-2xl bg-stone-900/30 border border-stone-850 flex flex-wrap justify-around items-center gap-6 text-center">
-          <div>
-            <span className="text-2xl font-mono font-black text-white">10k+</span>
-            <span className="text-[10px] font-mono tracking-widest text-stone-500 block uppercase mt-0.5">Detailing Hours Completed</span>
-          </div>
-          <div className="w-px h-8 bg-stone-800 hidden md:block" />
-          <div>
-            <span className="text-2xl font-mono font-black text-white">100%</span>
-            <span className="text-[10px] font-mono tracking-widest text-stone-500 block uppercase mt-0.5">Prestige Finish Guaranteed</span>
-          </div>
-          <div className="w-px h-8 bg-stone-800 hidden md:block" />
-          <div>
-            <span className="text-2xl font-mono font-black text-white">DIP 2</span>
-            <span className="text-[10px] font-mono tracking-widest text-stone-500 block uppercase mt-0.5">Dubai Investment Park Studio</span>
-          </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

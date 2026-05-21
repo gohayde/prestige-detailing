@@ -121,10 +121,9 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="relative py-28 bg-[#0a0a0a] overflow-hidden">
-      {/* Decorative ceiling gold laser lights like high-end detailing garages */}
-      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#FFCA2B] to-transparent opacity-40" />
-      <div className="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FFCA2B]/10 rounded-full filter blur-[100px] pointer-events-none" />
+    <section id="services" style={{ background: 'var(--color-paper-2)' }} className="relative py-28 overflow-hidden">
+      <div className="absolute top-0 inset-x-0 h-[1px]" style={{ background: 'var(--color-rule)' }} />
+      <div className="absolute -top-[300px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full filter blur-[100px] pointer-events-none" style={{ background: 'var(--color-bloom-1)' }} />
 
       {/* Extreme light sweep in high-end studio */}
       <div className="absolute top-1/4 right-0 w-80 h-96 bg-white/5 rounded-full filter blur-[120px] pointer-events-none" />
@@ -134,14 +133,12 @@ export default function Services() {
         {/* Header content with luxury tone */}
         <div className="text-center md:text-left md:flex justify-between items-end mb-20 gap-8">
           <div>
-            <span className="text-xs font-mono font-bold tracking-[0.3em] text-[#FFCA2B] uppercase block mb-3">
-              PRECISION MECHANICAL PROTECTION
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-muted)', fontWeight: 500, display: 'block', marginBottom: '0.75rem' }}>
+              Precision mechanical protection
             </span>
-            <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight">
-              STUDIO SERVICES <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-stone-400 via-white to-stone-500">
-                & SPECIFICATION SHEETS
-              </span>
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight" style={{ color: 'var(--color-ink)', lineHeight: 1.05 }}>
+              STUDIO SERVICES<br />
+              <span style={{ color: 'var(--color-ink-2)', fontWeight: 500 }}>& SPECIFICATION SHEETS</span>
             </h2>
           </div>
           <p className="text-stone-400 text-xs sm:text-sm max-w-md mt-4 md:mt-0 font-sans leading-relaxed text-left">
@@ -154,8 +151,8 @@ export default function Services() {
           
           {/* Left: Beautifully interactive horizontal/vertical listing selector */}
           <div className="lg:col-span-5 flex flex-col gap-3">
-            <span className="text-[10px] font-mono tracking-widest text-stone-500 uppercase font-bold mb-1 pl-2">
-              SELECT SERVICE PACK
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.625rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-muted)', fontWeight: 500, paddingLeft: '0.5rem', marginBottom: '0.25rem' }}>
+              Select service
             </span>
             {SERVICES_DATA.map((service) => {
               const isSelected = service.id === selectedServiceId;
@@ -163,29 +160,25 @@ export default function Services() {
                 <button
                   key={service.id}
                   onClick={() => setSelectedServiceId(service.id)}
-                  className={`group w-full rounded-2xl p-5 border text-left flex items-center justify-between transition-all duration-300 cursor-pointer ${
-                    isSelected
-                      ? 'bg-gradient-to-br from-stone-900 to-black border-[#FFCA2B] shadow-[0_10px_30px_rgba(255,202,43,0.08)] scale-[1.02]'
-                      : 'bg-stone-900/40 border-stone-800/80 hover:bg-stone-900/90 hover:border-stone-700/80 hover:scale-[1.01]'
-                  }`}
+                  className="group w-full rounded-2xl p-5 border text-left flex items-center justify-between transition-all duration-300 cursor-pointer"
+                  style={{
+                    background: isSelected ? 'var(--color-paper-3)' : 'oklch(11% 0.009 88 / 0.5)',
+                    borderColor: isSelected ? 'var(--color-accent)' : 'var(--color-rule)',
+                    boxShadow: isSelected ? 'var(--shadow-glow)' : 'none',
+                    transform: isSelected ? 'scale(1.02)' : 'scale(1)',
+                  }}
                 >
                   <div className="flex items-center gap-4 pl-2">
                     <div>
-                      <h3 className={`text-sm font-bold tracking-wide uppercase transition-colors ${
-                        isSelected ? 'text-[#FFCA2B]' : 'text-stone-300 group-hover:text-white'
-                      }`}>
+                      <h3 className="text-sm font-bold tracking-wide uppercase transition-colors" style={{ color: isSelected ? 'var(--color-accent)' : 'var(--color-ink-2)' }}>
                         {service.title}
                       </h3>
-                      <p className="text-stone-500 text-[11px] font-mono mt-0.5 group-hover:text-stone-400 transition-colors">
-                        Estimated from {service.priceEstimate}
+                      <p className="text-[11px] font-mono mt-0.5 transition-colors" style={{ color: 'var(--color-muted)' }}>
+                        From {service.priceEstimate}
                       </p>
                     </div>
                   </div>
-                  <div className={`p-1.5 rounded-full border transition-all ${
-                    isSelected
-                      ? 'bg-[#FFCA2B]/10 border-[#FFCA2B] text-[#FFCA2B]'
-                      : 'bg-transparent border-transparent text-stone-600 group-hover:text-white'
-                  }`}>
+                  <div className="p-1.5 rounded-full border transition-all" style={{ background: isSelected ? 'var(--color-accent-3)' : 'transparent', borderColor: isSelected ? 'var(--color-accent)' : 'transparent', color: isSelected ? 'var(--color-accent)' : 'var(--color-muted)' }}>
                     <ChevronRight className="w-3.5 h-3.5" />
                   </div>
                 </button>
@@ -202,7 +195,8 @@ export default function Services() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.4 }}
-                className="w-full rounded-3xl bg-stone-900 border border-stone-800 p-8 md:p-10 flex flex-col justify-between overflow-hidden relative shadow-2xl"
+                className="w-full rounded-3xl p-8 md:p-10 flex flex-col justify-between overflow-hidden relative"
+                    style={{ background: 'var(--color-paper-3)', border: '1px solid var(--color-rule)', boxShadow: 'var(--shadow-card)' }}
               >
                 {/* Visual Glass background thumbnail reflection */}
                 <div className="absolute inset-0 z-0 opacity-15 overflow-hidden">
@@ -218,35 +212,35 @@ export default function Services() {
 
                 {/* Sub-Header info */}
                 <div className="relative z-10">
-                  <div className="flex justify-between items-start gap-4 mb-6 pb-6 border-b border-stone-800/60">
+                  <div className="flex justify-between items-start gap-4 mb-6 pb-6" style={{ borderBottom: '1px solid var(--color-rule)' }}>
                     <div>
-                      <span className="text-[10px] font-mono tracking-widest text-[#FFCA2B] uppercase font-bold">
-                        SERVICE SPEC SHEET //
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.625rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-muted)', fontWeight: 500 }}>
+                        Spec sheet
                       </span>
-                      <h3 className="text-xl md:text-3xl font-black text-white mt-1 uppercase tracking-tight">
+                      <h3 className="text-xl md:text-3xl font-black mt-1 uppercase tracking-tight" style={{ color: 'var(--color-ink)' }}>
                         {selectedService.title}
                       </h3>
                     </div>
                     {selectedService.stats && (
-                      <span className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#FFCA2B] text-[10px] font-bold tracking-widest font-mono uppercase">
+                      <span style={{ padding: '0.375rem 0.875rem', borderRadius: 'var(--radius-full)', border: '1px solid var(--color-rule)', color: 'var(--color-accent)', fontSize: '0.625rem', fontFamily: 'var(--font-mono)', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
                         {selectedService.stats}
                       </span>
                     )}
                   </div>
 
-                  <p className="text-stone-300 text-xs md:text-sm leading-relaxed mb-8">
+                  <p className="text-xs md:text-sm leading-relaxed mb-8" style={{ color: 'var(--color-ink-2)' }}>
                     {selectedService.description}
                   </p>
 
-                  {/* Scientific benefits checkmarks */}
+                  {/* Benefits */}
                   <div className="flex flex-col gap-3.5 mb-10">
-                    <span className="text-[10px] font-mono tracking-widest text-stone-500 uppercase font-bold">
-                      INCLUDED BENCHMARKS:
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.625rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-muted)', fontWeight: 500 }}>
+                      Included:
                     </span>
                     {selectedService.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-4 h-4 text-[#FFCA2B] shrink-0 mt-0.5" />
-                        <span className="text-stone-300 text-xs leading-relaxed">
+                        <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: 'var(--color-accent)' }} />
+                        <span className="text-xs leading-relaxed" style={{ color: 'var(--color-ink-2)' }}>
                           {benefit}
                         </span>
                       </div>
@@ -255,16 +249,16 @@ export default function Services() {
                 </div>
 
                 {/* Bottom Estimate Box */}
-                <div className="relative z-10 pt-6 border-t border-stone-800/60 flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4">
+                <div className="relative z-10 pt-6 flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4" style={{ borderTop: '1px solid var(--color-rule)' }}>
                   <div>
-                    <span className="text-[9px] font-mono tracking-widest text-stone-500 uppercase font-bold">
-                      ESTIMATED BASE VALUE:
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.625rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-muted)', fontWeight: 500 }}>
+                      Estimated base value
                     </span>
                     <div className="flex items-baseline gap-2 mt-1">
-                      <span className="text-2xl md:text-3xl font-black text-[#FFCA2B] font-mono">
+                      <span className="text-2xl md:text-3xl font-black font-mono" style={{ color: 'var(--color-accent)' }}>
                         {selectedService.priceEstimate}
                       </span>
-                      <span className="text-[10px] text-stone-500 font-mono">/ basic package</span>
+                      <span className="text-[10px] font-mono" style={{ color: 'var(--color-muted)' }}>/ basic package</span>
                     </div>
                   </div>
 
@@ -272,7 +266,10 @@ export default function Services() {
                     href={`https://wa.me/971555096234?text=${encodeURIComponent(`Hi Ayman! I would love to book the "${selectedService.title}" service package for my car (Estimated at ${selectedService.priceEstimate}). Can we chat about scheduling?`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#FFCA2B] text-black hover:bg-yellow-450 hover:scale-[1.02] font-black text-xs uppercase tracking-widest transition-all duration-300 active:scale-95 shadow-[0_10px_30px_rgba(255,202,43,0.15)] whitespace-nowrap"
+                    className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-black text-xs uppercase tracking-widest transition-all duration-300 active:scale-95 whitespace-nowrap"
+                    style={{ background: 'var(--color-accent)', color: 'var(--color-paper)', boxShadow: 'var(--shadow-glow)' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.transform = 'scale(1.02)'; (e.currentTarget as HTMLAnchorElement).style.background = 'oklch(90% 0.170 88)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.transform = 'scale(1)'; (e.currentTarget as HTMLAnchorElement).style.background = 'var(--color-accent)'; }}
                   >
                     <WhatsAppIcon className="w-4.5 h-4.5 shrink-0" />
                     <span>Book via WhatsApp</span>

@@ -44,7 +44,7 @@ export default function Stats() {
   };
 
   return (
-    <section id="about" className="relative py-20 bg-black overflow-hidden">
+    <section id="about" style={{ background: 'var(--color-paper)' }} className="relative py-20 overflow-hidden">
       {/* Light glow effects */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[#FFCA2B]/5 rounded-full filter blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full filter blur-[120px] pointer-events-none" />
@@ -56,14 +56,14 @@ export default function Stats() {
           
           {/* Left Column: Compact Premium Minimalist Text */}
           <div className="lg:col-span-5 flex flex-col gap-6 text-stone-350 pr-4">
-            <span className="text-xs font-mono tracking-[0.25em] text-[#FFCA2B] uppercase font-bold">
-              THE ARTISANS OF PRESTIGE
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-muted)', fontWeight: 500 }}>
+              The artisans of Prestige
             </span>
             <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight font-display leading-[1.05]">
               PRECISION <br />
               <span className="text-[#FFCA2B]">WITHOUT LIMITS</span>
             </h2>
-            <div className="flex flex-col gap-4 text-base sm:text-[17px] leading-relaxed text-stone-300 font-sans font-medium">
+            <div className="flex flex-col gap-4 text-base sm:text-[17px] leading-relaxed font-sans font-medium" style={{ color: 'var(--color-ink-2)', maxWidth: '68ch' }}>
               <p>
                 At Prestige Detailing, we break industry standards with a clinical paint protection laboratory powered by an elite team of world-class female detailing specialists and master artisans. Our specialists bring unparalleled focus and surgical micro-precision to every vehicle.
               </p>
@@ -77,9 +77,9 @@ export default function Stats() {
           </div>
 
           {/* Right Column: Large Single Container with Bigger Photo and Overlapping Video */}
-          <div 
+          <div
             ref={containerRef}
-            className="lg:col-span-12 xl:col-span-7 relative h-[450px] sm:h-[580px] md:h-[640px] w-full mt-8 lg:mt-0 xl:-translate-x-8"
+            className="lg:col-span-7 relative h-[450px] sm:h-[580px] md:h-[640px] w-full mt-8 lg:mt-0"
           >
             
             {/* 1. Large Portrait/Landscape Main Photo (Slightly bigger, filling container with left-shift) */}

@@ -60,7 +60,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen text-white select-none selection:bg-[#FFCA2B] selection:text-black scroll-smooth">
+    <div style={{ background: 'var(--color-paper)', color: 'var(--color-ink)' }} className="min-h-screen select-none scroll-smooth">
       {/* 1. Glassmorphism Top Header Navigation */}
       <Header onNavClick={handleScrollToSection} activeSection={activeSection} />
 
