@@ -37,14 +37,9 @@ export default function Footer({ onNavClick }: FooterProps) {
           <div className="flex flex-col gap-6">
             <button
               onClick={(e) => handleLinkClick(e, 'hero')}
-              className="flex flex-col group cursor-pointer text-left w-fit self-start focus:outline-none"
+              className="flex items-center cursor-pointer focus:outline-none w-fit self-start"
             >
-              <span className="font-display font-black text-white text-2xl tracking-tighter leading-none mb-1">
-                PRESTIGE
-              </span>
-              <span className="font-mono text-[9px] text-[#FFCA2B] font-extrabold tracking-[0.38em] leading-none pl-[1px]">
-                DETAILING
-              </span>
+              <img src="/images/Logo.png" alt="Prestige Detailing" style={{ height: '2.75rem', width: 'auto', objectFit: 'contain', filter: 'brightness(1.1)' }} />
             </button>
  
             <p className="text-stone-400 text-xs sm:text-sm leading-relaxed max-w-sm font-sans font-medium">
@@ -81,10 +76,10 @@ export default function Footer({ onNavClick }: FooterProps) {
                 href="https://wa.me/971555096234"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center bg-[#FFCA2B] border border-[#FFCA2B] text-black hover:bg-white hover:border-white hover:scale-105 transition-all duration-300 rounded-[14px]"
+                className="w-12 h-12 flex items-center justify-center bg-black border border-stone-800 text-stone-400 hover:text-black hover:bg-[#FFCA2B] hover:border-[#FFCA2B] hover:scale-105 transition-all duration-300 rounded-[14px]"
                 title="WhatsApp"
               >
-                <WhatsAppIcon className="w-[1.125rem] h-[1.125rem] text-current" />
+                <WhatsAppIcon className="w-4.5 h-4.5 text-current" />
               </a>
             </div>
           </div>
@@ -116,7 +111,7 @@ export default function Footer({ onNavClick }: FooterProps) {
  
           {/* Column 4: Private Channels / Assistance */}
           <div className="flex flex-col gap-4">
-            <h4 className="text-xs font-black tracking-[0.15em] text-[#FFCA2B] uppercase font-sans">CAN WE HELP?</h4>
+            <h4 className="text-xs font-black tracking-[0.15em] text-white uppercase font-sans">CAN WE HELP?</h4>
             <div className="flex flex-col gap-3.5 text-xs text-stone-400 font-semibold font-sans">
               <a
                 href="https://wa.me/971555096234"
@@ -125,7 +120,7 @@ export default function Footer({ onNavClick }: FooterProps) {
                 className="flex items-center gap-2.5 hover:text-[#FFCA2B] transition-colors cursor-pointer group"
                 title="Chat with WhatsApp Support"
               >
-                <WhatsAppIcon className="w-4 h-4 text-[#FFCA2B] shrink-0" />
+                <WhatsAppIcon className="w-4 h-4 text-stone-400 shrink-0" />
                 <span>WhatsApp</span>
               </a>
 
@@ -134,7 +129,7 @@ export default function Footer({ onNavClick }: FooterProps) {
                 className="flex items-center gap-2.5 hover:text-[#FFCA2B] transition-colors cursor-pointer group"
                 title="Email Prestige Detailing"
               >
-                <Mail className="w-4 h-4 text-[#FFCA2B] shrink-0" />
+                <Mail className="w-4 h-4 text-stone-400 shrink-0" />
                 <span>Email Us</span>
               </a>
 
@@ -145,7 +140,7 @@ export default function Footer({ onNavClick }: FooterProps) {
                 className="flex items-center gap-2.5 hover:text-[#FFCA2B] transition-colors cursor-pointer group"
                 title="Get Maps Location Directions"
               >
-                <MapPin className="w-4 h-4 text-[#FFCA2B] shrink-0" />
+                <MapPin className="w-4 h-4 text-stone-400 shrink-0" />
                 <span>Get Directions</span>
               </a>
             </div>

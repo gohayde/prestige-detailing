@@ -46,12 +46,12 @@ export default function SectionCta() {
           alt="Prestige Detailing studio"
           style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%' }}
         />
-        {/* Dark base overlay */}
-        <div style={{ position: 'absolute', inset: 0, background: 'oklch(8% 0.008 88 / 0.72)' }} />
+        {/* Dark base overlay — pulled back so the car reads */}
+        <div style={{ position: 'absolute', inset: 0, background: 'oklch(8% 0.008 88 / 0.45)' }} />
         {/* Cinematic vignette */}
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'radial-gradient(ellipse at center, transparent 30%, oklch(5% 0.005 88 / 0.65) 100%)',
+          background: 'radial-gradient(ellipse at center, transparent 40%, oklch(5% 0.005 88 / 0.45) 100%)',
         }} />
       </motion.div>
 
@@ -72,19 +72,6 @@ export default function SectionCta() {
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-
-          {/* Pre-heading */}
-          <p style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: 'var(--text-xs)',
-              letterSpacing: '0.22em',
-              textTransform: 'uppercase',
-              color: 'var(--color-accent)',
-              marginBottom: '1.5rem',
-            }}
-          >
-            Private bookings only
-          </p>
 
           {/* Main headline */}
           <h2
@@ -114,9 +101,10 @@ export default function SectionCta() {
               color: 'var(--color-ink-2)',
               maxWidth: '44ch',
               marginBottom: '2.5rem',
+              textAlign: 'center',
             }}
           >
-            Book directly with Ayman. No call centres, no forms — a real conversation about what your car needs, and what it will take to get it there.
+            Book directly with Ayman — a real conversation about what your car needs, and what it will take to get it there.
           </p>
 
           {/* CTAs */}

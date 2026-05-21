@@ -31,17 +31,6 @@ export default function StatsBar() {
             once: true,
           },
         });
-        // subtle highlight sweep on each item
-        itemsRef.current.forEach((el) => {
-          gsap.fromTo(el,
-            { backgroundImage: 'linear-gradient(90deg, transparent 0%, transparent 100%)' },
-            {
-              backgroundImage: 'linear-gradient(90deg, oklch(85% 0.17 88 / 0.04) 0%, transparent 100%)',
-              duration: 0.5,
-              scrollTrigger: { trigger: el, start: 'top 90%', once: true },
-            }
-          );
-        });
       }
     });
     return () => ctx.revert();

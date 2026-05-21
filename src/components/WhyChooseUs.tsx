@@ -186,7 +186,7 @@ export default function WhyChooseUs() {
                   }}
                 >
                   <div style={{
-                    width: '2.75rem', height: '2.75rem', borderRadius: '50%',
+                    width: '2.75rem', height: '2.75rem', borderRadius: '0.625rem',
                     border: `1px solid ${i === 0 ? 'var(--color-accent)' : 'var(--color-rule)'}`,
                     background: i === 0 ? 'oklch(85% 0.170 88 / 0.08)' : 'var(--color-paper)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',

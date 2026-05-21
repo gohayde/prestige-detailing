@@ -16,13 +16,13 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] });
   const videoY = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
   const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '-8%']);
-  const overlayOpacity = useTransform(scrollYProgress, [0, 0.6], [0.35, 0.7]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 0.6], [0.55, 0.82]);
 
   return (
     <section
       ref={sectionRef}
       id="hero"
-      className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-black"
+      className="relative h-screen flex flex-col justify-end overflow-hidden bg-black"
     >
       {/* Full-bleed video canvas — parallax */}
       <motion.div style={{ position: 'absolute', inset: '-20%', zIndex: 0, y: videoY }}>
@@ -38,7 +38,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
 
         {/* Layered overlay: darken + vignette + bottom fade */}
         <motion.div style={{ position: 'absolute', inset: 0, background: 'oklch(13% 0.010 45)', opacity: overlayOpacity }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, transparent 45%, oklch(13% 0.010 45 / 0.55) 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, transparent 45%, oklch(13% 0.010 45 / 0.75) 100%)' }} />
         <div style={{
           position: 'absolute',
           bottom: 0,
@@ -52,23 +52,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
       </motion.div>
 
       {/* Content — anchored to bottom, parallax upward on scroll */}
-      <motion.div style={{ position: 'relative', zIndex: 10, maxWidth: '72rem', margin: '0 auto', padding: 'clamp(8rem, 20vw, 18rem) var(--space-lg) var(--space-3xl)', width: '100%', y: contentY }}>
-
-        {/* Eyebrow tag */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          style={{ marginBottom: 'var(--space-lg)', display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}
-        >
-          <span style={{
-            fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)',
-            fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase',
-            color: 'var(--color-accent)',
-          }}>
-            Dubai Investment Park 2 · Est. 2018
-          </span>
-        </motion.div>
+      <motion.div style={{ position: 'relative', zIndex: 10, maxWidth: '72rem', margin: '0 auto', padding: 'clamp(6rem, 14vw, 13rem) var(--space-lg) clamp(1.5rem, 3vw, 2.5rem)', width: '100%', y: contentY }}>
 
         {/* Hero headline — ≤50 chars, split into two lines at full --text-display */}
         <div style={{ overflow: 'hidden', marginBottom: 'var(--space-lg)' }}>
@@ -89,8 +73,8 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
               minWidth: 0,
             }}
           >
-            Dubai's Most<br />
-            <span style={{ color: 'var(--color-accent)' }}>Trusted Studio.</span>
+            PPF. Ceramic.<br />
+            <span style={{ color: 'var(--color-accent)' }}>Perfection.</span>
 
           </motion.h1>
         </div>

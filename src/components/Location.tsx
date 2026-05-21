@@ -137,10 +137,10 @@ export default function Location() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch" style={{ alignItems: 'stretch' }}>
 
           {/* Left: address + hours */}
-          <div className="lg:col-span-5 flex flex-col gap-5">
+          <div className="lg:col-span-5 flex flex-col gap-5" style={{ minHeight: 0 }}>
 
             {/* Address card */}
             <div
@@ -290,17 +290,17 @@ export default function Location() {
               borderRadius: 'var(--radius-xl)',
               overflow: 'hidden',
               border: '1px solid var(--color-rule)',
-              boxShadow: 'var(--shadow-card)',
-              minHeight: '280px',
-              maxHeight: '420px',
+              minHeight: '420px',
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
             <iframe
               title="Prestige Detailing UAE Maps Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.8339610753374!2d55.19030897603032!3d24.97176317785687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f737892ef89f7%3A0x3f3168db587f711a!2sPrestige%20Detailing%20UAE!5e0!3m2!1sen!2sae!4v1779383904953!5m2!1sen!2sae"
               width="100%"
-              height="380"
-              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(110%) brightness(95%)', display: 'block' }}
+              height="100%"
+              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(110%) brightness(95%)', display: 'block', flex: 1, minHeight: '420px' }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

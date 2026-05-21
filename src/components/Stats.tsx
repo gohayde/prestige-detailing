@@ -1,17 +1,12 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Play, Pause } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Stats() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isInView, setIsInView] = useState(false);
-  const [imageSrc, setImageSrc] = useState('/images/maybach.png');
   const sectionRef = useRef<HTMLElement>(null);
   const textColRef = useRef<HTMLDivElement>(null);
 
@@ -40,27 +35,7 @@ export default function Stats() {
     return () => ctx.revert();
   }, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '200px' }
-    );
-    if (containerRef.current) observer.observe(containerRef.current);
-    return () => observer.disconnect();
-  }, []);
 
-  const toggleVideo = () => {
-    if (videoRef.current) {
-      if (playing) videoRef.current.pause();
-      else videoRef.current.play().catch(() => {});
-      setPlaying(!playing);
-    }
-  };
 
   return (
     <section ref={sectionRef} id="about" style={{ background: 'var(--color-paper)' }} className="relative overflow-hidden">
@@ -151,37 +126,67 @@ export default function Stats() {
             </blockquote>
           </motion.div>
 
-          {/* Right — video fully visible, no overflow crop */}
+          {/* Right — stacked image composition */}
           <div
             ref={containerRef}
             className="relative w-full mt-8 lg:mt-0"
-            style={{ display: 'flex', alignItems: 'stretch', minHeight: 'clamp(300px, 36vw, 480px)' }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 'clamp(2rem, 4vw, 3rem)',
+              minHeight: 'clamp(360px, 42vw, 540px)',
+            }}
           >
+            {/* Main large image */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              onClick={toggleVideo}
-              className="relative w-full rounded-2xl overflow-hidden shadow-2xl cursor-pointer group"
-              style={{ background: 'oklch(5% 0.005 88)', flex: 1 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              style={{
+                position: 'absolute',
+                top: '2rem',
+                left: '1rem',
+                right: '4rem',
+                bottom: '4rem',
+                borderRadius: '1.25rem',
+                overflow: 'hidden',
+                border: '1px solid #fff',
+                background: 'oklch(10% 0.005 88)',
+              }}
             >
-              {isInView ? (
-                <video
-                  ref={videoRef}
-                  src="https://cdn.scentbazaar.co/Hero%20Video%20FInal%201.mp4"
-                  autoPlay loop muted playsInline
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                />
-              ) : (
-                <div className="w-full h-full bg-stone-900 animate-pulse" />
-              )}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-                <div className="p-2.5 rounded-full bg-black/80 border border-white text-white">
-                  {playing ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+              <img
+                src="/images/maybach.png"
+                alt="Maybach in Prestige Detailing studio"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            </motion.div>
+
+            {/* Overlapping video — bottom right */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
+              style={{
+                position: 'absolute',
+                bottom: '1rem',
+                right: '1rem',
+                width: '42%',
+                aspectRatio: '3/4',
+                borderRadius: '1rem',
+                overflow: 'hidden',
+                border: '3px solid #fff',
+                boxShadow: '0 8px 32px oklch(0% 0 0 / 0.45)',
+                background: 'oklch(10% 0.005 88)',
+              }}
+            >
+              <video
+                src="https://cdn.scentbazaar.co/Hero%20Video%20FInal%201.mp4"
+                autoPlay loop muted playsInline
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
             </motion.div>
           </div>
 

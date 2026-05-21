@@ -168,26 +168,19 @@ export default function BeforeAfter() {
                     paddingBottom: i < steps.length - 1 ? 'var(--space-lg)' : 0,
                   }}
                 >
-                  {/* Circle badge */}
+                  {/* Plain number */}
                   <div style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    width: '2.4rem', height: '2.4rem',
+                    display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
+                    width: '2.4rem', paddingTop: '0.1rem',
                     flexShrink: 0, position: 'relative', zIndex: 1,
                   }}>
-                    <div style={{
-                      width: '2.2rem', height: '2.2rem', borderRadius: '50%',
-                      border: `1.5px solid ${i === 0 ? 'var(--color-accent)' : 'oklch(30% 0.010 45)'}`,
-                      background: i === 0 ? 'oklch(83% 0.170 88 / 0.1)' : 'var(--color-paper)',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    <span style={{
+                      fontFamily: 'var(--font-mono)', fontSize: '0.75rem', fontWeight: 700,
+                      color: 'var(--color-accent)',
+                      letterSpacing: '0.04em',
                     }}>
-                      <span style={{
-                        fontFamily: 'var(--font-mono)', fontSize: '0.65rem', fontWeight: 700,
-                        color: i === 0 ? 'var(--color-accent)' : 'var(--color-muted)',
-                        letterSpacing: '-0.04em',
-                      }}>
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
-                    </div>
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
                   </div>
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 'var(--space-md)' }}>
