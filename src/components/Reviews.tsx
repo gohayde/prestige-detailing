@@ -233,7 +233,7 @@ export default function Reviews() {
             display: 'flex',
             gap: '1rem',
             width: 'max-content',
-            animation: 'marquee-scroll 180s linear infinite',
+            animation: 'marquee-scroll 210s linear infinite',
           }}
           onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.animationPlayState = 'paused'; }}
           onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.animationPlayState = 'running'; }}

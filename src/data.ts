@@ -96,21 +96,6 @@ export const SERVICES_DATA: Service[] = [
     bgImage: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80',
     stats: 'Complete Rescue'
   },
-  {
-    id: 'dent-repair',
-    title: 'Paintless Dent Repair (PDR)',
-    description: 'Bespoke hand-crafted extraction of minor body dings and creases without standard chemical body fillers or repainting. Preserves the original factory paint finish completely.',
-    benefits: [
-      'Smoothly massaged back to form without changing original bodywork panels',
-      'Retains 100% original factory paint finish and vehicle history metrics',
-      'Perfect for shopping center door dings, side wall creases, and minor bumps',
-      'Saves high-end repaint charges and avoids vehicle depreciation'
-    ],
-    icon: 'Cpu',
-    priceEstimate: 'AED 400',
-    bgImage: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80',
-    stats: 'Dent Repair'
-  }
 ];
 
 export const REVIEWS_DATA: Review[] = [

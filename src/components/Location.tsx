@@ -18,7 +18,7 @@ const schedules = [
 export default function Location() {
   const sectionRef = useRef<HTMLElement>(null);
   const headRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement[]>([]);
+  const cardsRef = useRef<HTMLElement[]>([]);
 
   const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
 
@@ -198,21 +198,20 @@ export default function Location() {
             </div>
 
             {/* Hours card */}
-            <div
+            <details
               ref={(el) => { if (el) cardsRef.current[1] = el; }}
               style={{
                 borderRadius: 'var(--radius-xl)',
                 border: '1px solid var(--color-rule)',
                 background: 'var(--color-paper-2)',
-                padding: 'var(--space-xl)',
-                flex: 1,
+                padding: '1.25rem var(--space-xl)',
               }}
             >
-              <div style={{
+              <summary style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                marginBottom: 'var(--space-lg)',
-                paddingBottom: 'var(--space-md)',
-                borderBottom: '1px solid var(--color-rule)',
+                gap: '1rem',
+                cursor: 'pointer',
+                listStyle: 'none',
               }}>
                 <p style={{
                   fontFamily: 'var(--font-mono)', fontSize: '0.6rem', fontWeight: 700,
@@ -228,9 +227,9 @@ export default function Location() {
                   padding: '0.2rem 0.6rem',
                   borderRadius: 'var(--radius-full)',
                 }}>Open Now</span>
-              </div>
+              </summary>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0', marginTop: 'var(--space-md)', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--color-rule)' }}>
                 {schedules.map((sched, i) => {
                   const isToday = sched.day === today;
                   return (
@@ -279,7 +278,7 @@ export default function Location() {
                   );
                 })}
               </div>
-            </div>
+            </details>
           </div>
 
           {/* Right: map */}
@@ -290,7 +289,8 @@ export default function Location() {
               borderRadius: 'var(--radius-xl)',
               overflow: 'hidden',
               border: '1px solid var(--color-rule)',
-              minHeight: '420px',
+              minHeight: '360px',
+              maxHeight: '520px',
               display: 'flex',
               flexDirection: 'column',
             }}
@@ -300,7 +300,7 @@ export default function Location() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.8339610753374!2d55.19030897603032!3d24.97176317785687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f737892ef89f7%3A0x3f3168db587f711a!2sPrestige%20Detailing%20UAE!5e0!3m2!1sen!2sae!4v1779383904953!5m2!1sen!2sae"
               width="100%"
               height="100%"
-              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(110%) brightness(95%)', display: 'block', flex: 1, minHeight: '420px' }}
+              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(110%) brightness(95%)', display: 'block', flex: 1, minHeight: '360px' }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

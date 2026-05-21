@@ -104,11 +104,11 @@ export default function WhyChooseUs() {
             style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--radius-xl)', maxHeight: '500px' }}
           >
             <img
-              src="/images/maybach.png"
-              alt="Prestige Detailing studio — precision at work"
+              src="/images/why-us-blue-hypercar.png"
+              alt="Blue hypercar in Prestige Detailing studio"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80';
+                (e.currentTarget as HTMLImageElement).src = '/images/maybach.png';
               }}
             />
             {/* Subtle vignette */}
@@ -177,7 +177,7 @@ export default function WhyChooseUs() {
                   ref={(el) => { if (el) pillarsRef.current[i] = el; }}
                   style={{
                     display: 'grid',
-                    gridTemplateColumns: '2.75rem 1fr',
+                    gridTemplateColumns: '1.75rem 1fr',
                     gap: '0 1.25rem',
                     paddingBottom: i < pillars.length - 1 ? '1.75rem' : 0,
                     paddingTop: i > 0 ? '1.75rem' : 0,
@@ -185,21 +185,16 @@ export default function WhyChooseUs() {
                     position: 'relative',
                   }}
                 >
-                  <div style={{
-                    width: '2.75rem', height: '2.75rem', borderRadius: '0.625rem',
-                    border: `1px solid ${i === 0 ? 'var(--color-accent)' : 'var(--color-rule)'}`,
-                    background: i === 0 ? 'oklch(85% 0.170 88 / 0.08)' : 'var(--color-paper)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    flexShrink: 0, zIndex: 1,
+                  <span style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '0.65rem',
+                    fontWeight: 600,
+                    letterSpacing: '0.08em',
+                    color: 'var(--color-muted)',
+                    lineHeight: '1.45rem',
                   }}>
-                    <span style={{
-                      fontFamily: 'var(--font-mono)', fontSize: '0.6875rem',
-                      fontWeight: 600, letterSpacing: '0.05em',
-                      color: 'var(--color-accent)',
-                    }}>
-                      {p.index}
-                    </span>
-                  </div>
+                    {p.index}
+                  </span>
 
                   <div>
                     <h3 style={{
