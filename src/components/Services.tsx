@@ -24,33 +24,39 @@ export default function Services() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (headRef.current) {
-        gsap.from(headRef.current.children, {
-          y: 30,
-          opacity: 0,
-          duration: 0.9,
-          stagger: 0.12,
-          ease: 'power3.out',
-          scrollTrigger: { trigger: headRef.current, start: 'top 85%', once: true },
-        });
+        gsap.fromTo(headRef.current.children,
+          { y: 30, opacity: 0 },
+          {
+            y: 0, opacity: 1,
+            duration: 0.9,
+            stagger: 0.12,
+            ease: 'power3.out',
+            scrollTrigger: { trigger: headRef.current, start: 'top 90%', once: true },
+          }
+        );
       }
       if (listRef.current) {
-        gsap.from(listRef.current.children, {
-          x: -24,
-          opacity: 0,
-          duration: 0.65,
-          stagger: 0.08,
-          ease: 'power3.out',
-          scrollTrigger: { trigger: listRef.current, start: 'top 85%', once: true },
-        });
+        gsap.fromTo(listRef.current.children,
+          { x: -24, opacity: 0 },
+          {
+            x: 0, opacity: 1,
+            duration: 0.65,
+            stagger: 0.08,
+            ease: 'power3.out',
+            scrollTrigger: { trigger: listRef.current, start: 'top 90%', once: true },
+          }
+        );
       }
       if (panelRef.current) {
-        gsap.from(panelRef.current, {
-          x: 30,
-          opacity: 0,
-          duration: 0.9,
-          ease: 'power3.out',
-          scrollTrigger: { trigger: panelRef.current, start: 'top 85%', once: true },
-        });
+        gsap.fromTo(panelRef.current,
+          { x: 30, opacity: 0 },
+          {
+            x: 0, opacity: 1,
+            duration: 0.9,
+            ease: 'power3.out',
+            scrollTrigger: { trigger: panelRef.current, start: 'top 90%', once: true },
+          }
+        );
       }
     }, sectionRef);
     return () => ctx.revert();
