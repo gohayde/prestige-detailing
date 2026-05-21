@@ -1,0 +1,6 @@
+{
+  "name": "Prestige Detailing UAE",
+  "description": "High-end luxury car detailing, ceramic coating, and PPF studio in Dubai Investment Park. Mirror finish results for supercars.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
