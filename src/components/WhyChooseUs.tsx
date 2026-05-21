@@ -169,56 +169,55 @@ export default function WhyChooseUs() {
             </h2>
 
             {/* Numbered pillars */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0', position: 'relative' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0', position: 'relative', maxWidth: '34rem' }}>
 
               {pillars.map((p, i) => (
                 <div
                   key={p.index}
                   ref={(el) => { if (el) pillarsRef.current[i] = el; }}
                   style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1.75rem 1fr',
-                    gap: '0 1.25rem',
-                    paddingBottom: i < pillars.length - 1 ? '1.75rem' : 0,
-                    paddingTop: i > 0 ? '1.75rem' : 0,
+                    paddingBottom: i < pillars.length - 1 ? '1.25rem' : 0,
+                    paddingTop: i > 0 ? '1.25rem' : 0,
                     borderTop: i > 0 ? '1px solid var(--color-rule-2)' : 'none',
                     position: 'relative',
                   }}
                 >
-                  <span style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '0.65rem',
-                    fontWeight: 600,
-                    letterSpacing: '0.08em',
-                    color: 'var(--color-muted)',
-                    lineHeight: '1.45rem',
-                  }}>
-                    {p.index}
-                  </span>
-
-                  <div>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.875rem', marginBottom: '0.35rem' }}>
+                    <span style={{
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '0.625rem',
+                      fontWeight: 700,
+                      letterSpacing: '0.12em',
+                      color: 'var(--color-accent)',
+                      minWidth: '1.5rem',
+                    }}>
+                      {p.index}
+                    </span>
                     <h3 style={{
                       fontFamily: 'var(--font-display)',
-                      fontSize: '0.9375rem',
+                      fontSize: '0.875rem',
                       fontWeight: 700,
                       color: 'var(--color-ink)',
-                      marginBottom: '0.35rem',
-                      letterSpacing: '-0.01em',
+                      margin: 0,
+                      letterSpacing: '0.02em',
+                      textTransform: 'uppercase',
                     }}>
                       {p.title}
                     </h3>
-                    <p style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.8125rem',
-                      fontWeight: 400,
-                      lineHeight: 1.65,
-                      color: 'var(--color-ink-2)',
-                      maxWidth: '44ch',
-                      margin: 0,
-                    }}>
-                      {p.body}
-                    </p>
                   </div>
+
+                  <p style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.8125rem',
+                    fontWeight: 400,
+                    lineHeight: 1.55,
+                    color: 'var(--color-ink-2)',
+                    maxWidth: '48ch',
+                    margin: 0,
+                    paddingLeft: '2.375rem',
+                  }}>
+                    {p.body}
+                  </p>
                 </div>
               ))}
             </div>
