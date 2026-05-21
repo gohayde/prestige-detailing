@@ -1,11 +1,44 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { CAR_TYPES, SERVICES_DATA } from '../data';
 import { Car, Check, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Cta() {
   const [selectedCarId, setSelectedCarId] = useState(CAR_TYPES[0].id);
   const [selectedServiceIds, setSelectedServiceIds] = useState<string[]>([SERVICES_DATA[0].id]);
+  const sectionRef = useRef<HTMLElement>(null);
+  const headRef = useRef<HTMLDivElement>(null);
+  const builderRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (headRef.current) {
+        gsap.from(headRef.current.children, {
+          y: 35,
+          opacity: 0,
+          duration: 1.0,
+          stagger: 0.12,
+          ease: 'power4.out',
+          scrollTrigger: { trigger: headRef.current, start: 'top 85%', once: true },
+        });
+      }
+      if (builderRef.current) {
+        gsap.from(builderRef.current.children, {
+          y: 24,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: builderRef.current, start: 'top 88%', once: true },
+        });
+      }
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
 
   const activeCar = CAR_TYPES.find((c) => c.id === selectedCarId) || CAR_TYPES[0];
 
@@ -35,6 +68,7 @@ export default function Cta() {
 
   return (
     <section
+      ref={sectionRef}
       id="configurator"
       style={{
         position: 'relative',
@@ -47,7 +81,7 @@ export default function Cta() {
       <div style={{ maxWidth: '72rem', margin: '0 auto', padding: '0 var(--space-lg)', position: 'relative', zIndex: 1 }}>
 
         {/* Section header */}
-        <div style={{ marginBottom: 'var(--space-3xl)' }}>
+        <div ref={headRef} style={{ marginBottom: 'var(--space-3xl)' }}>
           <h2 style={{
             fontFamily: 'var(--font-display)',
             fontSize: 'clamp(2.5rem, 4vw + 1rem, 4rem)',
@@ -60,12 +94,12 @@ export default function Cta() {
             overflowWrap: 'anywhere',
             minWidth: 0,
           }}>
-            Build your<br />estimate.
+            Calculate your<br />estimate.
           </h2>
           <p style={{
             fontFamily: 'var(--font-body)',
             fontSize: 'var(--text-sm)',
-            fontWeight: 350,
+            fontWeight: 400,
             lineHeight: 1.7,
             color: 'var(--color-muted)',
             maxWidth: '56ch',
@@ -77,6 +111,7 @@ export default function Cta() {
 
         {/* Builder grid */}
         <div
+          ref={builderRef}
           style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: 'var(--space-xl)', alignItems: 'stretch' }}
           className="max-lg:grid-cols-1"
         >
@@ -85,12 +120,7 @@ export default function Cta() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)' }}>
 
             {/* Car type */}
-            <div style={{
-              borderRadius: 'var(--radius-xl)',
-              border: '1px solid var(--color-rule)',
-              background: 'var(--color-paper)',
-              padding: 'var(--space-xl)',
-            }}>
+            <div style={{ padding: '0' }}>
               <p style={{
                 fontFamily: 'var(--font-outlier)',
                 fontSize: 'var(--text-xs)', fontWeight: 600,
@@ -170,12 +200,7 @@ export default function Cta() {
             </div>
 
             {/* Services */}
-            <div style={{
-              borderRadius: 'var(--radius-xl)',
-              border: '1px solid var(--color-rule)',
-              background: 'var(--color-paper)',
-              padding: 'var(--space-xl)',
-            }}>
+            <div style={{ padding: '0' }}>
               <p style={{
                 fontFamily: 'var(--font-outlier)',
                 fontSize: 'var(--text-xs)', fontWeight: 600,

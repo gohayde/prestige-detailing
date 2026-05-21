@@ -52,7 +52,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
       </motion.div>
 
       {/* Content — anchored to bottom, parallax upward on scroll */}
-      <motion.div style={{ position: 'relative', zIndex: 10, maxWidth: '72rem', margin: '0 auto', padding: 'var(--space-4xl) var(--space-lg) var(--space-2xl)', width: '100%', y: contentY }}>
+      <motion.div style={{ position: 'relative', zIndex: 10, maxWidth: '72rem', margin: '0 auto', padding: 'clamp(8rem, 20vw, 18rem) var(--space-lg) var(--space-3xl)', width: '100%', y: contentY }}>
 
         {/* Eyebrow tag */}
         <motion.div
@@ -66,7 +66,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
             fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase',
             color: 'var(--color-accent)',
           }}>
-            Dubai's Premier Detailing Studio
+            Dubai Investment Park 2 · Est. 2018
           </span>
         </motion.div>
 
@@ -89,8 +89,9 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
               minWidth: 0,
             }}
           >
-            Home of Premium<br />
-            <span style={{ color: 'var(--color-accent)' }}>Car Detailing</span>
+            Dubai's Most<br />
+            <span style={{ color: 'var(--color-accent)' }}>Trusted Studio.</span>
+
           </motion.h1>
         </div>
 

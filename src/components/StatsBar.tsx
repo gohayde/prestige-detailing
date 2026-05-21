@@ -1,77 +1,102 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import React from 'react';
-import { motion } from 'motion/react';
+gsap.registerPlugin(ScrollTrigger);
+
+const signals = [
+  { value: '4.9', label: 'Google Rating' },
+  { value: '100+', label: '5-Star Reviews' },
+  { value: '10,000+', label: 'Detailing Hours' },
+  { value: 'DIP 2', label: 'Dubai Studio' },
+  { value: 'Owner-supervised', label: 'Every Job' },
+];
 
 export default function StatsBar() {
-  const stats = [
-    { value: '100+', label: '5-Star Reviews' },
-    { value: '9H', label: 'Coating Grade' },
-    { value: 'Owner', label: 'Supervised' },
-    { value: 'DIP 2', label: 'Dubai Studio' },
-  ];
+  const barRef = useRef<HTMLDivElement>(null);
+  const itemsRef = useRef<HTMLDivElement[]>([]);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (itemsRef.current.length) {
+        gsap.from(itemsRef.current, {
+          y: 20,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: barRef.current,
+            start: 'top 92%',
+            once: true,
+          },
+        });
+        // subtle highlight sweep on each item
+        itemsRef.current.forEach((el) => {
+          gsap.fromTo(el,
+            { backgroundImage: 'linear-gradient(90deg, transparent 0%, transparent 100%)' },
+            {
+              backgroundImage: 'linear-gradient(90deg, oklch(85% 0.17 88 / 0.04) 0%, transparent 100%)',
+              duration: 0.5,
+              scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+            }
+          );
+        });
+      }
+    });
+    return () => ctx.revert();
+  }, []);
 
   return (
     <div
+      ref={barRef}
       style={{
         position: 'relative',
         zIndex: 25,
         background: 'var(--color-paper)',
-        padding: '2.5rem 0',
         borderTop: '1px solid var(--color-rule)',
         borderBottom: '1px solid var(--color-rule)',
+        overflow: 'hidden',
       }}
     >
-      <div style={{ maxWidth: '72rem', margin: '0 auto', padding: '0 var(--space-lg)' }}>
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-          gap: '2rem',
-          flexWrap: 'wrap',
-        }}>
-          {stats.map((item, index) => (
-            <motion.div
+      <div style={{ maxWidth: '80rem', margin: '0 auto', padding: '0 var(--space-lg)' }}>
+        <div style={{ display: 'flex', alignItems: 'stretch', flexWrap: 'wrap' }}>
+          {signals.map((item, i) => (
+            <div
               key={item.label}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              ref={(el) => { if (el) itemsRef.current[i] = el; }}
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center',
                 justifyContent: 'center',
-                textAlign: 'center',
-                flex: '1 1 180px',
-                padding: '0.25rem 1rem',
+                padding: '1.75rem 2.5rem',
+                borderRight: i < signals.length - 1 ? '1px solid var(--color-rule)' : 'none',
+                flex: '1 1 0',
+                minWidth: '10rem',
               }}
             >
               <span style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(2rem, 4vw, 2.75rem)',
-                fontWeight: 800,
-                color: 'var(--color-accent)',
+                fontSize: 'clamp(1.1rem, 1.8vw, 1.4rem)',
+                fontWeight: 700,
                 letterSpacing: '-0.02em',
+                color: 'var(--color-ink)',
                 lineHeight: 1,
-                marginBottom: '0.35rem',
+                marginBottom: '0.3rem',
               }}>
                 {item.value}
               </span>
               <span style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: '0.75rem',
-                fontWeight: 600,
+                fontSize: '0.65rem',
+                fontWeight: 500,
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
                 color: 'var(--color-muted)',
               }}>
                 {item.label}
               </span>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

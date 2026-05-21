@@ -1,18 +1,44 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Play, Pause, ShieldCheck } from 'lucide-react';
+import { Play, Pause } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Stats() {
-  const videoRef1 = useRef<HTMLVideoElement>(null);
-  const [playing1, setPlaying1] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
   const [imageSrc, setImageSrc] = useState('/images/maybach.png');
+  const sectionRef = useRef<HTMLElement>(null);
+  const textColRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (textColRef.current) {
+        gsap.from(textColRef.current.children, {
+          y: 30,
+          opacity: 0,
+          duration: 0.9,
+          stagger: 0.12,
+          ease: 'power4.out',
+          scrollTrigger: { trigger: textColRef.current, start: 'top 80%', once: true },
+        });
+      }
+      if (containerRef.current) {
+        gsap.from(containerRef.current, {
+          clipPath: 'inset(0 0 100% 0)',
+          opacity: 0,
+          duration: 1.1,
+          ease: 'power4.inOut',
+          scrollTrigger: { trigger: containerRef.current, start: 'top 80%', once: true },
+        });
+      }
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,116 +48,144 @@ export default function Stats() {
           observer.disconnect();
         }
       },
-      { rootMargin: '200px' } // Start loading 200px before the container scrolls into view
+      { rootMargin: '200px' }
     );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
+    if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
 
-  const toggleVideo1 = () => {
-    if (videoRef1.current) {
-      if (playing1) {
-        videoRef1.current.pause();
-      } else {
-        videoRef1.current.play().catch(() => {});
-      }
-      setPlaying1(!playing1);
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (playing) videoRef.current.pause();
+      else videoRef.current.play().catch(() => {});
+      setPlaying(!playing);
     }
   };
 
   return (
-    <section id="about" style={{ background: 'var(--color-paper)' }} className="relative py-20 overflow-hidden">
-      {/* Light glow effects */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[#FFCA2B]/5 rounded-full filter blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full filter blur-[120px] pointer-events-none" />
+    <section ref={sectionRef} id="about" style={{ background: 'var(--color-paper)' }} className="relative overflow-hidden">
+      {/* Subtle ambient bloom */}
+      <div style={{
+        position: 'absolute', top: '30%', left: '10%',
+        width: '30rem', height: '30rem',
+        background: 'var(--color-bloom-1)',
+        borderRadius: '50%', filter: 'blur(120px)', pointerEvents: 'none',
+      }} />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
-        {/* Split Layout: Minimal Story Text & Layered Media Collage */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Left Column: Compact Premium Minimalist Text */}
-          <div className="lg:col-span-5 flex flex-col gap-6 text-stone-350 pr-4">
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--color-muted)', fontWeight: 500 }}>
+      <div style={{ maxWidth: '80rem', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2" style={{ minHeight: '640px' }}>
+
+          {/* Left — editorial text column */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            style={{
+              padding: 'clamp(3.5rem, 7vw, 6rem) clamp(2rem, 5vw, 4rem)',
+              display: 'flex', flexDirection: 'column', justifyContent: 'center',
+              borderRight: '1px solid var(--color-rule)',
+            }}
+          >
+            <p style={{
+              fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)',
+              letterSpacing: '0.22em', textTransform: 'uppercase',
+              color: 'var(--color-muted)', marginBottom: '1.5rem',
+            }}>
               The artisans of Prestige
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight font-display leading-[1.05]">
-              PRECISION <br />
-              <span className="text-[#FFCA2B]">WITHOUT LIMITS</span>
-            </h2>
-            <div className="flex flex-col gap-4 text-base sm:text-[17px] leading-relaxed font-sans font-medium" style={{ color: 'var(--color-ink-2)', maxWidth: '58ch' }}>
-              <p>
-                At Prestige Detailing, we operate a clinical paint protection studio inside Dubai Investment Park 2. Every vehicle receives advanced clay-bar decontamination, paint thickness mapping, multi-stage rotary compounding, and hand-folded self-healing PPF — all personally supervised by Mr. Ayman from intake to delivery.
-              </p>
-            </div>
-          </div>
+            </p>
 
-          {/* Right Column: Large Single Container with Bigger Photo and Overlapping Video */}
+            <h2 style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(2.25rem, 4vw + 0.5rem, 3.5rem)',
+              fontWeight: 800,
+              letterSpacing: '-0.03em',
+              lineHeight: 1.06,
+              textTransform: 'uppercase',
+              color: 'var(--color-ink)',
+              margin: '0 0 2rem',
+            }}>
+              Precision<br />
+              <span style={{ color: 'var(--color-accent)' }}>without limits.</span>
+            </h2>
+
+            <p style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 'clamp(0.875rem, 1.2vw + 0.3rem, 1rem)',
+              fontWeight: 400,
+              lineHeight: 1.75,
+              color: 'var(--color-ink-2)',
+              maxWidth: '52ch',
+              marginBottom: '2.5rem',
+            }}>
+              At Prestige Detailing, we operate a clinical paint protection studio inside Dubai Investment Park 2. Every vehicle receives advanced clay-bar decontamination, paint thickness mapping, multi-stage rotary compounding, and hand-folded self-healing PPF — all personally supervised by Mr. Ayman from intake to delivery.
+            </p>
+
+            {/* Pull quote */}
+            <blockquote style={{
+              borderLeft: '2px solid var(--color-accent)',
+              paddingLeft: '1.25rem',
+              margin: 0,
+            }}>
+              <p style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(0.9rem, 1.2vw + 0.3rem, 1.05rem)',
+                fontWeight: 600,
+                fontStyle: 'italic',
+                lineHeight: 1.55,
+                color: 'var(--color-ink)',
+                margin: '0 0 0.5rem',
+              }}>
+                "I physically inspect every compound pass, film fold, and edge wrap. There is no delegation on quality."
+              </p>
+              <cite style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.65rem',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'var(--color-accent)',
+                fontStyle: 'normal',
+              }}>
+                — Mr. Ayman, Owner &amp; Head Detailer
+              </cite>
+            </blockquote>
+          </motion.div>
+
+          {/* Right — video fully visible, no overflow crop */}
           <div
             ref={containerRef}
-            className="lg:col-span-7 relative h-[450px] sm:h-[580px] md:h-[640px] w-full mt-8 lg:mt-0"
+            className="relative w-full mt-8 lg:mt-0"
+            style={{ display: 'flex', alignItems: 'stretch', minHeight: 'clamp(300px, 36vw, 480px)' }}
           >
-            
-            {/* 1. Large Portrait/Landscape Main Photo (Slightly bigger, filling container with left-shift) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative w-full h-[90%] sm:h-full rounded-2xl overflow-hidden border border-stone-850 shadow-2xl bg-stone-950"
-            >
-              <img 
-                src={imageSrc} 
-                alt="Prestige Maybach Detailing Studio" 
-                className="w-[108%] h-full object-cover max-w-none -translate-x-[6%]"
-                referrerPolicy="no-referrer"
-                loading="lazy"
-                onError={() => {
-                  setImageSrc("https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1800&q=80");
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent pointer-events-none" />
-            </motion.div>
- 
-            {/* 2. Pristine Overlay Video Container placed gracefully ON top of the photo - TALL PORTRAIT LAYOUT */}
-            <motion.div
-              initial={{ opacity: 0, x: 20, y: 20 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              onClick={toggleVideo1}
-              className="absolute bottom-[-15px] right-[-10px] sm:bottom-[-20px] sm:right-[-15px] w-[44%] sm:w-[38%] h-[75%] sm:h-[82%] rounded-2xl overflow-hidden border-4 border-white bg-stone-950 shadow-[0_25px_50px_rgba(0,0,0,0.9)] cursor-pointer group hover:scale-[1.03] transition-all duration-305 z-20"
+              onClick={toggleVideo}
+              className="relative w-full rounded-2xl overflow-hidden shadow-2xl cursor-pointer group"
+              style={{ background: 'oklch(5% 0.005 88)', flex: 1 }}
             >
               {isInView ? (
                 <video
-                  ref={videoRef1}
+                  ref={videoRef}
                   src="https://cdn.scentbazaar.co/Hero%20Video%20FInal%201.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover animate-fade-in duration-700"
+                  autoPlay loop muted playsInline
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               ) : (
                 <div className="w-full h-full bg-stone-900 animate-pulse" />
               )}
-              {/* Playback Overlay Hint */}
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
                 <div className="p-2.5 rounded-full bg-black/80 border border-white text-white">
-                  {playing1 ? <Pause className="w-4 h-4 text-white" /> : <Play className="w-4 h-4 text-white ml-0.5" />}
+                  {playing ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
                 </div>
               </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
             </motion.div>
-
           </div>
 
         </div>
-
-
       </div>
     </section>
   );
